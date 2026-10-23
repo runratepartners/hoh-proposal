@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hunter of Homes · The 30-Day Build · RunRate Partners</title>
+<meta name="description" content="A written proposal for Hunter of Homes, ERA Powered. Built from the October 21 call with Josh Austin.">
+<meta name="theme-color" content="#F9F7F6">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#F9F7F6;--surface:#FFFFFF;--surface-2:#FFFFFF;--surface-3:#E9E6E2;
+--border:#E5E0DC;--border-strong:#C5C1B9;
+--text:#262626;--text-muted:#4A4A4A;--text-dim:#6B6B6B;
+--accent:#568F6E;--accent-glow:rgba(86,143,110,0.10);
+--gold:#B45309;--gold-bar:#F59E0B;--gold-glow:rgba(245,158,11,0.10);
+--red:#B91C1C;--red-glow:rgba(185,28,28,0.08);
+--green:#2F7A52;--green-glow:rgba(86,143,110,0.10);
+--radius:12px;--radius-lg:18px;
+--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--serif:'Playfair Display',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--accent);color:#fff}
+.wrap{max-width:960px;margin:0 auto;padding:0 clamp(16px,4vw,36px)}
+p{color:var(--text-muted);line-height:1.7;margin-bottom:14px}
+strong{color:var(--text);font-weight:600}
+a{color:var(--accent)}
+
+.brand-bar{padding:12px 0;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(249,247,246,.94);backdrop-filter:blur(10px);z-index:50}
+.brand-bar .inner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand-logo{font-weight:700;letter-spacing:.5px;font-size:15px}
+.brand-logo .era{color:var(--accent);font-style:italic}
+.brand-meta{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase}
+
+section{padding:56px 0;border-top:1px solid var(--border)}
+section:first-of-type{border-top:none}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,6vw,52px);line-height:1.08;letter-spacing:-.8px;font-weight:600;margin-bottom:18px}
+h1 em,h2 em{font-style:italic;color:var(--accent);font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(23px,4.2vw,34px);line-height:1.16;letter-spacing:-.4px;font-weight:600;margin-bottom:12px}
+h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.section-sub{font-size:15.5px;color:var(--text-muted);max-width:760px;margin-bottom:30px;line-height:1.75}
+.hero-sub{font-size:17.5px;color:var(--text-muted);line-height:1.7;margin-bottom:26px;max-width:650px}
+.quote{border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin:18px 0 26px;font-family:var(--serif);font-size:clamp(18px,3vw,22px);line-height:1.45;color:var(--text);font-style:italic}
+.quote small{display:block;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-top:10px}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:12px;margin-top:30px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.stat-num{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1;letter-spacing:-1px;margin-bottom:6px}
+.stat-num.accent{color:var(--accent)}.stat-num.gold{color:var(--gold)}.stat-num.red{color:var(--red)}
+.stat-label{font-family:var(--mono);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-dim);line-height:1.5}
+
+/* four items */
+.four{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+.item .n{font-family:var(--serif);font-size:26px;color:var(--accent);line-height:1;letter-spacing:-1px}
+.item .t{font-size:16px;font-weight:700;line-height:1.3}
+.item .q{font-size:13.5px;color:var(--text-muted);line-height:1.6;font-style:italic}
+.item .q b{color:var(--text);font-style:normal}
+
+/* the line */
+.line-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,4vw,30px);margin-top:10px}
+.hours{display:grid;grid-template-columns:150px 1fr 92px;align-items:center;gap:12px;margin-bottom:10px}
+.hours .lb{font-size:13.5px;color:var(--text-muted);text-align:right;line-height:1.3}
+.hours .lb b{color:var(--text);display:block}
+.hours .tr{height:24px;background:var(--surface-3);border-radius:5px;overflow:hidden}
+.hours .fl{height:100%;border-radius:5px}
+.hours .v{font-family:var(--mono);font-size:13px;text-align:right;font-weight:700}
+.hours.now .fl{background:var(--gold-bar)}.hours.now .v{color:var(--gold)}
+.hours.bad .fl{background:var(--red)}.hours.bad .v{color:var(--red)}
+.hours.good .fl{background:var(--green)}.hours.good .v{color:var(--green)}
+.hours-note{font-size:13px;color:var(--text-dim);margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-family:var(--mono);letter-spacing:.3px;line-height:1.6}
+
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:26px}
+.stage{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:19px 20px;position:relative}
+.stage.live{border-color:var(--accent);background:var(--accent-glow);border-width:2px}
+.stage .k{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
+.stage.live .k{color:var(--accent)}
+.stage .h{font-size:16px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.stage .d{font-size:13.5px;color:var(--text-muted);line-height:1.65}
+.stage .d b{color:var(--text)}
+
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:26px 0 8px}
+.tl .wk{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 14px 16px;border-top:3px solid var(--accent)}
+.tl .wk.w4{border-top-color:var(--green)}
+.tl .wk .n{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.tl .wk.w4 .n{color:var(--green)}
+.tl .wk .t{font-size:14px;font-weight:700;line-height:1.3;margin-bottom:6px}
+.tl .wk .d{font-size:12.5px;color:var(--text-muted);line-height:1.55}
+.tl-cap{font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--text-dim);text-align:center;margin-bottom:28px}
+
+/* workstreams */
+.ws{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:22px 24px;margin-bottom:12px}
+.ws .hd{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+.ws .num{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--accent);padding:5px 9px;border-radius:5px;font-weight:700}
+.ws .ttl{font-size:17.5px;font-weight:700;line-height:1.3}
+.ws .wk-tag{font-family:var(--mono);font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:var(--text-dim);margin-left:auto;white-space:nowrap}
+.ws .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:6px}
+.ws .col h4{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
+.ws .col h4.b{color:var(--accent)}
+.ws .col ul{list-style:none}
+.ws .col li{position:relative;padding-left:16px;margin-bottom:6px;font-size:14px;color:var(--text-muted);line-height:1.55}
+.ws .col li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.ws .col li b{color:var(--text)}
+.ws .said{font-size:13.5px;color:var(--text-muted);font-style:italic;margin-bottom:12px;line-height:1.6}
+.ws .said b{color:var(--text);font-style:normal}
+.ws .kpi{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.ws .kpi .lb{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green)}
+.ws .kpi .vl{font-size:14px;color:var(--text);font-weight:600}
+
+/* scoreboard */
+.score{background:var(--surface-2);border:1px solid var(--border-strong);box-shadow:0 10px 40px rgba(38,38,38,.06);border-radius:var(--radius-lg);overflow:hidden}
+.score .top{background:#F3F0ED;padding:14px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.score .top .ttl{font-weight:700;font-size:15px}
+.score .top .who{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);margin-left:auto;letter-spacing:1px;text-transform:uppercase}
+.score table{width:100%;border-collapse:collapse;font-size:14px}
+.score th{text-align:left;font-family:var(--mono);font-size:9.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--text-dim);font-weight:500;padding:14px 12px 10px;border-bottom:1px solid var(--border)}
+.score td{padding:13px 12px;border-bottom:1px solid var(--border);color:var(--text-muted);vertical-align:top;line-height:1.5}
+.score tr:last-child td{border-bottom:none}
+.score td.n{color:var(--text);font-weight:700}
+.score td.n small{display:block;font-weight:400;color:var(--text-dim);font-size:12px;margin-top:2px}
+.score td.m{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+.score td.g{color:var(--green);font-family:var(--mono);font-size:12.5px;font-weight:700;white-space:nowrap}
+.score th:first-child,.score td:first-child{padding-left:22px}
+.score th:last-child,.score td:last-child{padding-right:22px}
+.walk{margin-top:16px;background:var(--green-glow);border:1px solid var(--green);border-radius:var(--radius);padding:18px 22px}
+.walk b{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);display:block;margin-bottom:7px}
+.walk p{margin:0;font-size:14.5px;color:var(--text)}
+.item,.ws,.stat,.stage,.tl .wk,.opt{box-shadow:0 2px 10px rgba(38,38,38,.04)}
+
+/* price */
+.price-card{background:var(--surface-2);border:1px solid var(--border-strong);box-shadow:0 10px 40px rgba(38,38,38,.06);border-radius:var(--radius-lg);padding:clamp(22px,5vw,34px)}
+.price-top{display:flex;flex-wrap:wrap;gap:20px;align-items:baseline;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.price-num{font-family:var(--serif);font-size:clamp(46px,10vw,68px);font-weight:600;letter-spacing:-2.5px;line-height:.95}
+.price-terms{font-family:var(--mono);font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);line-height:2}
+.price-terms .no{color:var(--green)}
+.price-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:26px;margin-top:22px}
+.price-cols h3{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.price-cols .inc h3{color:var(--green)}
+.price-cols .exc h3{color:var(--red)}
+.price-cols ul{list-style:none}
+.price-cols li{position:relative;padding-left:20px;margin-bottom:9px;font-size:14px;color:var(--text-muted);line-height:1.6}
+.price-cols .inc li::before{content:"+";position:absolute;left:0;color:var(--green);font-weight:700}
+.price-cols .exc li::before{content:"\2013";position:absolute;left:0;color:var(--red);font-weight:700}
+.price-fine{margin-top:22px;padding-top:20px;border-top:1px solid var(--border);font-size:13.5px;color:var(--text-muted);line-height:1.75}
+.price-fine strong{color:var(--text)}
+
+.day30{margin-top:28px}
+.day30 h3{font-size:18px;margin-bottom:6px}
+.day30 .sub{font-size:14px;color:var(--text-muted);margin-bottom:16px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.opt{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:18px 19px}
+.opt.rec{border-color:var(--accent)}
+.opt .ph{font-family:var(--mono);font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:7px}
+.opt.rec .ph{color:var(--accent)}
+.opt .pv{font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:-1px;color:var(--text);line-height:1}
+.opt .pv small{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--text-dim);margin-left:4px}
+.opt .pn{font-size:13px;color:var(--text-muted);margin-top:9px;line-height:1.55}
+.opt .pn b{color:var(--text)}
+
+.compare{margin-top:22px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px}
+.compare .ct{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px}
+.crow{display:grid;grid-template-columns:150px 1fr 110px;align-items:center;gap:12px;margin-bottom:9px}
+.crow .lb{font-size:13px;color:var(--text-muted);text-align:right;line-height:1.3}
+.crow .lb b{color:var(--text);display:block}
+.crow .tr{height:22px;background:var(--surface-3);border-radius:5px;overflow:hidden}
+.crow .fl{height:100%;border-radius:5px;background:var(--border-strong)}
+.crow.us .fl{background:var(--accent)}.crow.us .lb b{color:var(--accent)}
+.crow .v{font-family:var(--mono);font-size:12.5px;text-align:right;color:var(--text-muted);white-space:nowrap}
+.crow.us .v{color:var(--accent);font-weight:700}
+.compare .cn{font-size:13px;color:var(--text-dim);margin-top:12px;padding-top:12px;border-top:1px solid var(--border);line-height:1.6}
+
+/* exit */
+.exit{background:linear-gradient(135deg,var(--gold-glow),transparent);border:1px solid var(--gold);border-radius:var(--radius-lg);padding:clamp(22px,5vw,30px)}
+.exit .eyebrow{color:var(--gold)}
+.exit h2{font-size:clamp(20px,4vw,25px)}
+.exit p:last-child{margin-bottom:0}
+
+/* cta */
+.cta{text-align:center;padding:58px 0 20px;border-top:1px solid var(--border)}
+.cta .sub2{font-size:15.5px;color:var(--text-muted);max-width:560px;margin:0 auto 26px}
+.btn{display:inline-block;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(86,143,110,.25);font-weight:700;font-size:16px;padding:16px 30px;border-radius:10px;text-decoration:none;letter-spacing:-.2px}
+.btn small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;font-weight:700;opacity:.75;margin-top:4px}
+.slot{display:inline-block;background:var(--surface-2);border:1px solid var(--border-strong);border-radius:var(--radius);padding:20px 30px;margin-top:26px}
+.slot .when{font-family:var(--serif);font-size:clamp(19px,4vw,24px);font-weight:600;color:var(--text);letter-spacing:-.5px;line-height:1.3}
+.slot .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--text-dim);margin-top:9px}
+.cta .fallback{font-size:14px;color:var(--text-muted);margin-top:22px;max-width:520px;margin-left:auto;margin-right:auto}
+footer{padding:28px 0 42px;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;color:var(--text-dim);border-top:1px solid var(--border);margin-top:38px;line-height:1.9}
+
+
+/* mockups */
+.mock-cap{font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--text-dim);margin:18px 0 8px}
+.app{border:1px solid var(--border-strong);border-radius:12px;overflow:hidden;margin:0 0 18px;background:#fff;box-shadow:0 10px 30px rgba(38,38,38,.07)}
+.app-top{background:#F3F0ED;padding:11px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.app-top .ttl{font-weight:700;font-size:14px}
+.app-top .who{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);margin-left:auto;letter-spacing:.6px}
+.app-body{padding:14px 16px}
+.scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mt{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+.mt th{text-align:left;font-family:var(--mono);font-size:9.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-dim);font-weight:500;padding:0 10px 8px 0;border-bottom:1px solid var(--border);white-space:nowrap}
+.mt td{padding:9px 10px 9px 0;border-bottom:1px solid var(--border);color:var(--text-muted);vertical-align:middle;white-space:nowrap}
+.mt tr:last-child td{border-bottom:none}
+.mt td.k{color:var(--text);font-weight:600}
+.mt td.n{font-family:var(--mono);font-size:12px}
+.mt tr.hot td{background:var(--gold-glow)}
+.mt tr.stalled td{background:var(--red-glow)}
+.mt td.red{color:var(--red);font-weight:600}
+.pill{font-family:var(--mono);font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;padding:3px 8px;border-radius:4px;font-weight:700;white-space:nowrap}
+.pill.ok{background:var(--green-glow);color:var(--green)}
+.pill.warn{background:var(--gold-glow);color:var(--gold)}
+.cap{height:7px;width:90px;background:var(--surface-3);border-radius:4px;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:7px}
+.capf{height:100%;background:var(--accent);border-radius:4px}
+.capv{font-family:var(--mono);font-size:11.5px;color:var(--text)}
+.stmt{margin-top:14px;border-top:1px dashed var(--border-strong);padding-top:12px}
+.stmt-h{font-family:var(--mono);font-size:9.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
+.stmt-row{background:var(--accent-glow);border:1px solid rgba(86,143,110,.3);border-radius:8px;padding:11px 13px;font-size:13.5px;color:var(--text-muted);display:flex;flex-direction:column;gap:3px}
+.stmt-row b{color:var(--text)}
+.rbar{height:11px;background:var(--surface-3);border-radius:6px;overflow:hidden}
+.rbar .fill{height:100%;background:linear-gradient(90deg,var(--accent),#2F7A52);border-radius:6px}
+.rlabels{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--text-dim);margin-top:8px;letter-spacing:.6px}
+.rlabels .me{color:var(--accent);font-weight:700}
+.miles{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin-top:14px}
+.mile{background:#fff;border:1px solid var(--border);border-radius:9px;padding:11px 12px}
+.mile.done{border-color:var(--accent);background:var(--accent-glow)}
+.mile .ic{font-size:14px;margin-bottom:5px;font-weight:700;color:var(--text-dim)}
+.mile.done .ic{color:var(--green)}
+.mile .nm2{font-size:12.5px;font-weight:700;color:var(--text);line-height:1.3}
+.mile .dt{font-family:var(--mono);font-size:10px;color:var(--text-dim);margin-top:4px}
+.mile.done .dt{color:var(--green)}
+.mini{height:7px;background:var(--surface-3);border-radius:4px;overflow:hidden;min-width:70px}
+.mini .f{height:100%;border-radius:4px;background:var(--accent)}
+.mt tr.stalled .mini .f{background:var(--red)}
+.note-line{margin-top:12px;font-size:13px;color:var(--text-muted);border-left:3px solid var(--red);padding:6px 12px;background:var(--red-glow);border-radius:0 6px 6px 0}
+.kan{display:grid;grid-template-columns:repeat(5,minmax(132px,1fr));gap:8px;overflow-x:auto;padding-bottom:4px}
+.kcol{background:#F3F0ED;border-radius:9px;padding:8px;min-width:132px}
+.kcol.win{background:var(--accent-glow);border:1px solid rgba(86,143,110,.35)}
+.kh{font-family:var(--mono);font-size:9.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-dim);display:flex;justify-content:space-between;padding:2px 4px 8px}
+.kh span{color:var(--text);font-weight:700}
+.kcol.win .kh,.kcol.win .kh span{color:var(--green)}
+.kc{background:#fff;border:1px solid var(--border);border-radius:7px;padding:8px 9px;font-size:12px;color:var(--text);font-weight:600;line-height:1.3;margin-bottom:6px}
+.kc small{display:block;font-weight:400;color:var(--text-dim);font-size:11px;margin-top:3px}
+.kmore{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);text-align:center;padding:2px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.two>div{min-width:0}
+.app{min-width:0}
+.app-top .who{white-space:normal;text-align:right}
+.ev{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.ev:last-child{border-bottom:none}
+.ev.dim{opacity:.6}
+.evd b{display:block;font-family:var(--serif);font-size:17px;color:var(--text);line-height:1.1}
+.evd span{font-family:var(--mono);font-size:10px;color:var(--text-dim)}
+.evb b{display:block;font-size:13.5px;color:var(--text);line-height:1.3;margin-bottom:3px}
+.evb span{font-size:12.5px;color:var(--text-muted);line-height:1.45}
+.evb span b{display:inline;font-size:12.5px;color:var(--green)}
+.big3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.big3 div{background:#F3F0ED;border-radius:8px;padding:10px}
+.big3 b{display:block;font-family:var(--serif);font-size:22px;color:var(--text);line-height:1;letter-spacing:-.5px}
+.big3 span{font-family:var(--mono);font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);display:block;margin-top:5px}
+.bars{display:flex;align-items:flex-end;gap:5px;height:70px}
+.bars i{flex:1;background:var(--accent);border-radius:3px 3px 0 0;opacity:.75}
+.bars i.now{background:var(--gold-bar);opacity:1}
+.bars-l{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--text-dim);margin-top:6px}
+/* cost tiles */
+.cost{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.ct{background:#fff;border:1px solid var(--border);border-left:3px solid var(--red);border-radius:var(--radius);padding:18px 20px}
+.cv{font-family:var(--serif);font-size:30px;font-weight:600;letter-spacing:-1px;line-height:1;margin-bottom:8px}
+.cv.red{color:var(--red)}
+.cl{font-size:13.5px;color:var(--text-muted);line-height:1.55}
+/* comparison */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;min-width:640px;background:#fff;border:1px solid var(--border-strong);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;font-size:13.5px;font-weight:700;color:var(--text);padding:14px 14px;background:#F3F0ED;border-bottom:1px solid var(--border-strong);vertical-align:top}
+.cmp th small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--text-dim);font-weight:500;margin-top:4px}
+.cmp th.us{background:var(--accent);color:#fff}
+.cmp th.us small{color:rgba(255,255,255,.85)}
+.cmp td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--text-muted);vertical-align:middle}
+.cmp tr:last-child td{border-bottom:none}
+.cmp td.first,.cmp th.first{color:var(--text);font-weight:600;width:30%}
+.cmp td.us{background:var(--accent-glow);font-weight:600}
+.cmp .y{color:var(--green);font-weight:700}
+.cmp .x{color:var(--red)}
+.cmp .m{color:var(--gold)}
+.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:22px}
+.pf{background:#fff;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:var(--radius);padding:18px 19px}
+.pk{font-weight:700;font-size:15px;margin-bottom:7px;line-height:1.3}
+.pd{font-size:13.5px;color:var(--text-muted);line-height:1.6}
+@media screen and (max-width:720px){
+  .two{grid-template-columns:1fr}
+  .kan{display:flex}
+  .kcol{flex:0 0 150px}
+}
+@media screen and (max-width:720px){
+  .tl{grid-template-columns:1fr 1fr}
+  .ws .grid{grid-template-columns:1fr}
+  .ws .wk-tag{margin-left:0;width:100%}
+  .hours{grid-template-columns:110px 1fr 58px;gap:8px}
+  .crow{grid-template-columns:100px 1fr 90px;gap:8px}
+  .score th:nth-child(2),.score td:nth-child(2){display:none}
+  .score td.g,.score td.m{white-space:normal}
+  .score th,.score td{padding:11px 8px}
+  .score th:first-child,.score td:first-child{padding-left:14px}
+  .score th:last-child,.score td:last-child{padding-right:14px}
+}
+@media screen and (max-width:400px){
+  .tl{grid-template-columns:1fr}
+  .btn{white-space:normal;display:block}
+}
+@media print{
+  body{background:#fff}
+  .brand-bar{position:static;background:#fff}
+}
+</style>
+</head>
+<body>
+
+<div class="brand-bar"><div class="wrap inner">
+  <img src="https://hunterofhomes.info/assets/hunter-of-homes-logo-DUVXlMfr.png" alt="Hunter of Homes, ERA Powered" style="height:58px;width:auto;display:block;max-width:60vw;object-fit:contain">
+  <div class="brand-meta">Proposal · The 30-day build · Oct 2026</div>
+</div></div>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section>
+  <span class="eyebrow">Prepared for Josh Austin · Built from the October 21 call</span>
+  <h1>Four things off your plate.<br><em>Measured, every month.</em></h1>
+  <p class="hero-sub">You audited your own week and named the four places your time goes. This is the plan to take them off your desk in 30 days, with a number next to each one so you can see whether it is working.</p>
+  <div class="quote">"I can't be a one-man show forever."<small>Josh Austin · October 21</small></div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num accent">40</div><div class="stat-label">Agents today</div></div>
+    <div class="stat"><div class="stat-num accent">5</div><div class="stat-label">Offices, Idaho and Oregon</div></div>
+    <div class="stat"><div class="stat-num red">1</div><div class="stat-label">Person on staff</div></div>
+    <div class="stat"><div class="stat-num gold">6 hrs</div><div class="stat-label">A week on agent questions</div></div>
+    <div class="stat"><div class="stat-num gold">150</div><div class="stat-label">Agent goal, end of 2028</div></div>
+  </div>
+</section>
+
+<!-- THE FOUR -->
+<section>
+  <span class="eyebrow">What you told us</span>
+  <h2>The four, in your words.</h2>
+  <p class="section-sub">These are the things you said keep coming back to you over and over. We did not add to the list. The build below is these four and nothing else.</p>
+  <div class="four">
+    <div class="item"><div class="n">01</div><div class="t">Commission check to agent paid</div><div class="q">"Getting that property closed out properly and an agent paid. <b>That's a whole process in itself.</b>"</div></div>
+    <div class="item"><div class="n">02</div><div class="t">Recruiting new agents</div><div class="q">"That's kind of <b>its own ecosystem.</b>"</div></div>
+    <div class="item"><div class="n">03</div><div class="t">New agent to experienced agent</div><div class="q">"How do I onboard them properly? <b>How do I take a new agent and turn them into an experienced agent?</b>"</div></div>
+    <div class="item"><div class="n">04</div><div class="t">Keeping experienced agents, and CE classes</div><div class="q">"Give them something they can still work on so they don't feel like they've <b>outgrown the brokerage.</b>"</div></div>
+  </div>
+</section>
+
+<!-- THE LINE -->
+<section>
+  <span class="eyebrow">Your real question</span>
+  <h2>When do you bring in a body?</h2>
+  <p class="section-sub">You asked it twice: how far can you scale before you have to hire, and where is that line. Here is the honest answer. The line is a number, not a date, and the plan is built to find it.</p>
+
+  <div class="line-wrap">
+    <div class="hours now"><div class="lb"><b>Today</b>40 agents</div><div class="tr"><div class="fl" style="width:27%"></div></div><div class="v">6 hrs/wk</div></div>
+    <div class="hours bad"><div class="lb"><b>Nothing changes</b>150 agents</div><div class="tr"><div class="fl" style="width:100%"></div></div><div class="v">22.5 hrs/wk</div></div>
+    <div class="hours good"><div class="lb"><b>Systems running</b>40 agents, day 60 target</div><div class="tr"><div class="fl" style="width:13.5%"></div></div><div class="v">3 hrs/wk</div></div>
+    <div class="hours-note">6 hours a week across 40 agents is 9 minutes per agent. At 150 agents that same 9 minutes is 22.5 hours a week, more than half your week, answering questions. The systems exist to change the minutes per agent, which is the only number that lets you grow without the hours growing with you.</div>
+  </div>
+
+  <div class="stages">
+    <div class="stage live">
+      <div class="k">Now · where you are</div>
+      <div class="h">Don't hire. Build and run.</div>
+      <div class="d">Hiring first means paying someone to learn what is in your head. <b>We write it down, build the systems, and run them.</b> You are not watching over anything.</div>
+    </div>
+    <div class="stage">
+      <div class="k">The trigger · a number you will see</div>
+      <div class="h">When hours climb back, promote from within.</div>
+      <div class="d">With systems running, your hours drop. When they climb back past 6 a week, that is the hire signal. By then the SOPs are the job description, so <b>the person you bring in is useful on day one, not month six.</b> On today's numbers that lands around 70 to 90 agents. We will know the real line by day 60.</div>
+    </div>
+    <div class="stage">
+      <div class="k">150 · the goal</div>
+      <div class="h">They run it. You own it.</div>
+      <div class="d">The business runs on written process, not on you. <b>That is what makes it something you can hand to your kids, step back from, or sell.</b></div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:30px">What standing still costs</h3>
+  <div class="cost">
+    <div class="ct"><div class="cv red">22.5 hrs</div><div class="cl">a week on agent questions at 150 agents, if the minutes per agent do not change</div></div>
+    <div class="ct"><div class="cv red">$90k to $180k</div><div class="cl">the 5 to 10 agents you said you would not be shocked to lose, at roughly $18,000 each to replace. We walked you through that figure on October 2</div></div>
+    <div class="ct"><div class="cv red">20 agents</div><div class="cl">arrived in two months from the acquisition, into a 20-item checklist with nobody behind it. That is the ramp this build puts someone behind</div></div>
+  </div>
+</section>
+
+<!-- THE BUILD -->
+<section>
+  <span class="eyebrow">The build</span>
+  <h2>Thirty days, in the order we build it.</h2>
+  <p class="section-sub">Week one is the baseline and a quick win. Weeks two and three are the two heaviest items. Week four puts the first CE session on the calendar and hands everything over, and you decide who runs it. Every screen below is a sample of what you will actually look at, with sample data, so you can see the shape before you pay for it.</p>
+
+  <div class="tl">
+    <div class="wk"><div class="n">Week 1</div><div class="t">Baseline, and the check</div><div class="d">Measure the five numbers as they are today. Fix closeout-to-paid first, because it is the quickest win.</div></div>
+    <div class="wk"><div class="n">Week 2</div><div class="t">The ramp</div><div class="d">Your 20-item checklist becomes a 200-day journey with someone behind it. Us.</div></div>
+    <div class="wk"><div class="n">Week 3</div><div class="t">Recruiting</div><div class="d">The prospect list built, the pipeline live, and the first outreach out in your voice.</div></div>
+    <div class="wk w4"><div class="n">Week 4</div><div class="t">Retention, and handoff</div><div class="d">First CE session on the calendar. Every SOP written. The scoreboard live. You choose who runs it from here.</div></div>
+  </div>
+  <div class="tl-cap">Kickoff to live in 30 days</div>
+
+  <!-- 01 commission -->
+  <div class="ws">
+    <div class="hd"><span class="num">Week 1</span><span class="ttl">Commission check to agent paid</span><span class="wk-tag">Your item 01</span></div>
+    <div class="said">You said: <b>"Getting that property closed out properly and an agent paid, that's a whole process in itself."</b> And last time: you are still writing paper checks and handing them out at the office meeting.</div>
+
+    <p class="mock-cap">What you see · every closing, one screen · sample data</p>
+    <div class="app">
+      <div class="app-top"><span class="ttl">Payout tracker</span><span class="who">Week of Nov 2 · 3 closings · 1 waiting on you</span></div>
+      <div class="app-body scrollx">
+        <table class="mt">
+          <tr><th>Closing</th><th>Agent</th><th>GCI</th><th>Split</th><th>Toward $10k cap</th><th>Check in</th><th>Agent paid</th></tr>
+          <tr><td class="k">1842 Hwy 20, Star</td><td>K. Larsen</td><td class="n">$9,600</td><td class="n">80/20</td><td><div class="cap"><div class="capf" style="width:64%"></div></div><span class="capv">$6,400</span></td><td class="n">Nov 2</td><td><span class="pill ok">Nov 3 · 1 day</span></td></tr>
+          <tr><td class="k">44 Ranch Rd, Fruitland</td><td>R. Patel</td><td class="n">$12,400</td><td class="n">95/5</td><td><div class="cap"><div class="capf" style="width:100%"></div></div><span class="capv">Capped</span></td><td class="n">Nov 3</td><td><span class="pill ok">Nov 3 · same day</span></td></tr>
+          <tr class="hot"><td class="k">9 Orchard Ln, Ontario</td><td>T. Nguyen</td><td class="n">$7,250</td><td class="n">80/20</td><td><div class="cap"><div class="capf" style="width:29%"></div></div><span class="capv">$2,900</span></td><td class="n">Nov 4</td><td><span class="pill warn">Needs your sign-off</span></td></tr>
+        </table>
+        <div class="stmt">
+          <div class="stmt-h">What the agent sees · their own statement</div>
+          <div class="stmt-row"><b>K. Larsen · 2026 to date</b><span>6 closings · $58,400 GCI · $6,400 paid toward your $10,000 cap · <b>Next: $7,680 on Nov 3</b></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col"><h4 class="b">What we build</h4><ul>
+        <li>One closeout checklist per transaction, so nothing is missed between the check arriving and the file closing</li>
+        <li>The tracker above: every closing, its split, cap status, and the date paid</li>
+        <li>An agent statement each agent can see, which answers "where's my check" before it is asked</li>
+        <li>The written SOP, so anyone can run it</li>
+      </ul></div>
+      <div class="col"><h4>What it takes off your desk</h4><ul>
+        <li>The chase. Agents asking about money, and you rebuilding the file to answer</li>
+        <li>The math. Splits and cap tracking done once, not per check</li>
+        <li>Paper checks at the meeting become a process that runs the same whether you are there or hunting</li>
+      </ul></div>
+    </div>
+    <div class="kpi"><span class="lb">Measured</span><span class="vl">Days from check received to agent paid. Baseline week one, then shrink it.</span></div>
+  </div>
+
+  <!-- 02 ramp -->
+  <div class="ws">
+    <div class="hd"><span class="num">Week 2</span><span class="ttl">New agent to experienced agent</span><span class="wk-tag">Your item 03</span></div>
+    <div class="said">You said: <b>"I don't have the personnel to follow up, and I don't have the personnel to hold their hand."</b> And this week you named the fear: solve recruiting and it becomes a retention problem, all of it landing on you.</div>
+
+    <p class="mock-cap">What a new agent sees · their own first 200 days · sample data</p>
+    <div class="app">
+      <div class="app-top"><span class="ttl">Your first 200 days</span><span class="who">S. Ortega · joined Sep 15</span></div>
+      <div class="app-body">
+        <div class="rbar"><div class="fill" style="width:24%"></div></div>
+        <div class="rlabels"><span>Day 1</span><span class="me">Day 48 · you are here</span><span>Day 200</span></div>
+        <div class="miles">
+          <div class="mile done"><div class="ic">✓</div><div class="nm2">Licence moved</div><div class="dt">Day 4</div></div>
+          <div class="mile done"><div class="ic">✓</div><div class="nm2">Checklist 20 of 20</div><div class="dt">Day 11</div></div>
+          <div class="mile done"><div class="ic">✓</div><div class="nm2">First listing</div><div class="dt">Day 31</div></div>
+          <div class="mile"><div class="ic">○</div><div class="nm2">First contract</div><div class="dt">Not yet</div></div>
+          <div class="mile"><div class="ic">○</div><div class="nm2">First closing</div><div class="dt">Not yet</div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mock-cap">What you see · the whole roster, who is stalled · sample data</p>
+    <div class="app">
+      <div class="app-top"><span class="ttl">New agent roster</span><span class="who">5 in ramp · 2 need a call</span></div>
+      <div class="app-body scrollx">
+        <table class="mt">
+          <tr><th>Agent</th><th>Office</th><th>Day</th><th>Checklist</th><th>Last activity</th><th>Next check-in</th></tr>
+          <tr><td class="k">K. Larsen</td><td>Star</td><td class="n">61</td><td><div class="mini"><div class="f" style="width:100%"></div></div></td><td>Yesterday</td><td>Day 90 · us</td></tr>
+          <tr><td class="k">S. Ortega</td><td>Fruitland</td><td class="n">48</td><td><div class="mini"><div class="f" style="width:100%"></div></div></td><td>Today</td><td>Day 60 · us</td></tr>
+          <tr class="stalled"><td class="k">M. Byrne</td><td>Mountain Home</td><td class="n">44</td><td><div class="mini"><div class="f" style="width:35%"></div></div></td><td class="red">19 days ago</td><td class="red">Call today · us</td></tr>
+          <tr class="stalled"><td class="k">A. Flores</td><td>New Plymouth</td><td class="n">39</td><td><div class="mini"><div class="f" style="width:20%"></div></div></td><td class="red">24 days ago</td><td class="red">Call today · us</td></tr>
+          <tr><td class="k">J. Whitaker</td><td>Ontario, OR</td><td class="n">33</td><td><div class="mini"><div class="f" style="width:80%"></div></div></td><td>Today</td><td>Day 45 · us</td></tr>
+        </table>
+        <div class="note-line">The two red rows are the whole point. Nineteen and twenty-four days of silence, visible, before either of them quietly decides this is not working out.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col"><h4 class="b">What we build</h4><ul>
+        <li>Your 20-item checklist becomes a 200-day ramp with milestones: licence moved, checklist done, first listing, first contract, first closing</li>
+        <li>Check-ins at every milestone, run by us. A new agent who goes quiet for two weeks gets a call</li>
+        <li>We are the first line for new agents during their ramp. You see everything and touch only what needs you</li>
+      </ul></div>
+      <div class="col"><h4>What it takes off your desk</h4><ul>
+        <li>The hand-holding. The thing you said you do not have the personnel for</li>
+        <li>The repeat questions, which is where most of your 6 hours a week goes</li>
+        <li>Guessing who is struggling. The stalled rows are visible before they become departures</li>
+      </ul></div>
+    </div>
+    <div class="kpi"><span class="lb">Measured</span><span class="vl">Days to first closing for new agents, and your hours a week on agent questions.</span></div>
+  </div>
+
+  <!-- 03 recruiting -->
+  <div class="ws">
+    <div class="hd"><span class="num">Week 3</span><span class="ttl">Recruiting new agents</span><span class="wk-tag">Your item 02</span></div>
+    <div class="said">You said: <b>"I've never been a recruiter. That's just not my cup of tea."</b> Before the acquisition you were adding two or three agents a year. ERA brings you mergers. Nobody is working the individual agent.</div>
+
+    <p class="mock-cap">What you see · the pipeline, every Monday · sample data</p>
+    <div class="app">
+      <div class="app-top"><span class="ttl">Recruiting pipeline</span><span class="who">November · run by Josh Goode</span></div>
+      <div class="app-body">
+        <div class="kan">
+          <div class="kcol"><div class="kh">Prospects <span>14</span></div><div class="kc">Agent at a flat-fee shop, Nampa<small>Found via CE sign-up</small></div><div class="kc">Newly licensed, Caldwell<small>Referred by K. Larsen</small></div><div class="kmore">+12</div></div>
+          <div class="kcol"><div class="kh">Talking <span>6</span></div><div class="kc">Team lead, Meridian<small>Next: coffee Thu</small></div><div class="kc">Solo agent, Emmett<small>Next: your offer page</small></div><div class="kmore">+4</div></div>
+          <div class="kcol"><div class="kh">Office visit <span>3</span></div><div class="kc">Agent, Mountain Home<small>Tue 2pm with you</small></div><div class="kmore">+2</div></div>
+          <div class="kcol"><div class="kh">Offer out <span>2</span></div><div class="kc">Agent, Ontario<small>Follow-up Fri · us</small></div><div class="kmore">+1</div></div>
+          <div class="kcol win"><div class="kh">Joined <span>1</span></div><div class="kc">S. Ortega<small>Starts the ramp day 1</small></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col"><h4 class="b">What we build</h4><ul>
+        <li>The prospect list, built by us: every licensed agent in your five markets from the Idaho and Oregon licence lookups, scored by who is at a flat-fee shop, who is newly licensed, and who is solo. Our research agents do the finding; a person approves anything that goes out in your name</li>
+        <li>The pipeline above: every prospect, where they are, and the next touch</li>
+        <li>Outreach and follow-up written in your voice, run by us on a set cadence</li>
+        <li>Your offer on one page: the 80/20, the $10,000 cap, the 95/5 after it, and why that beats a flat-fee shop for an agent doing 8 to 12 deals a year</li>
+        <li>The CE class as the front door, below</li>
+      </ul></div>
+      <div class="col"><h4>What it takes off your desk</h4><ul>
+        <li>The follow-up. The part of recruiting that dies when one person is doing everything else</li>
+        <li>The cold start. Josh Goode runs this one. He built the onboarding for a marketplace with tens of thousands of sellers; a pipeline of agents is a smaller version of the same problem</li>
+      </ul></div>
+    </div>
+    <div class="kpi"><span class="lb">Measured</span><span class="vl">Recruiting conversations a month, and agents joined a quarter.</span></div>
+  </div>
+
+  <!-- 04 CE -->
+  <div class="ws">
+    <div class="hd"><span class="num">Week 4</span><span class="ttl">Keeping experienced agents, and CE classes</span><span class="wk-tag">Your item 04</span></div>
+    <div class="said">You said: <b>"I've always wanted to get to teaching some CE classes."</b> And that experienced agents need something to keep working on so they do not feel they have outgrown the brokerage.</div>
+
+    <div class="two">
+      <div>
+        <p class="mock-cap">The program · you teach, we run the room · sample</p>
+        <div class="app">
+          <div class="app-top"><span class="ttl">Hunter of Homes sessions</span><span class="who">Monthly</span></div>
+          <div class="app-body">
+            <div class="ev"><div class="evd"><b>Nov 12</b><span>11:30am</span></div><div class="evb"><b>Well and septic deals that actually close</b><span>Taught by Josh · lunch provided · <b>11 signed up, 4 not yet with Hunter of Homes</b></span></div></div>
+            <div class="ev"><div class="evd"><b>Dec 10</b><span>11:30am</span></div><div class="evb"><b>Small acreage: pricing land, not just the house</b><span>Taught by Josh · <b>invites go out Nov 13, by us</b></span></div></div>
+            <div class="ev dim"><div class="evd"><b>Jan 14</b><span>11:30am</span></div><div class="evb"><b>Topic from the agent survey</b><span>We ask, you pick</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="mock-cap">What a senior agent sees · the site you already built, switched on · sample</p>
+        <div class="app">
+          <div class="app-top"><span class="ttl">Your 2026</span><span class="who">R. Patel</span></div>
+          <div class="app-body">
+            <div class="big3"><div><b>9</b><span>closings</span></div><div><b>$84,200</b><span>GCI</span></div><div><b>Capped</b><span>Aug 19 · now 95/5</span></div></div>
+            <div class="bars"><i style="height:30%"></i><i style="height:50%"></i><i style="height:20%"></i><i style="height:70%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:40%"></i><i style="height:100%"></i><i style="height:55%"></i><i class="now" style="height:35%"></i></div>
+            <div class="bars-l"><span>Jan</span><span>Oct</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col"><h4 class="b">What we build</h4><ul>
+        <li>A standing session, monthly to start: you teach, agents bring laptops, lunch is on the table. New faces in the building are recruiting prospects by definition</li>
+        <li>Calendar, invites, sign-ups and reminders run by us, so your only job is to show up and teach</li>
+        <li>Switch on the agent-facing production site you already built. An agent who can watch their own numbers climb has a reason to stay that a flat-fee competitor cannot undercut</li>
+      </ul></div>
+      <div class="col"><h4>What it takes off your desk</h4><ul>
+        <li>The logistics, which is why the CE idea has stayed an idea</li>
+        <li>The "what's next for me" conversation with senior agents. The program answers it on a schedule</li>
+      </ul></div>
+    </div>
+    <div class="kpi"><span class="lb">Measured</span><span class="vl">Session attendance, and agents retained each quarter.</span></div>
+  </div>
+</section>
+
+<!-- SCOREBOARD -->
+<section>
+  <span class="eyebrow">How you will know</span>
+  <h2>Five numbers. Same five, every month.</h2>
+  <p class="section-sub">We are not going to put a made-up success number in front of you. Week one sets the baseline from your own data. From then on you see these five, and they either move or they do not.</p>
+
+  <div class="score">
+    <div class="top"><span class="ttl">Hunter of Homes scoreboard</span><span class="who">Monthly · from kickoff</span></div>
+    <table>
+      <tr><th>What</th><th>Why it matters</th><th>Baseline</th><th>Day 60 target</th></tr>
+      <tr><td class="n">Your hours on agent questions<small>per week</small></td><td>Your time is the constraint on everything else</td><td class="m">6 hrs</td><td class="g">3 hrs</td></tr>
+      <tr><td class="n">Check received to agent paid<small>days</small></td><td>The process you said is a whole job in itself</td><td class="m">Week 1</td><td class="g">Shorter, every month</td></tr>
+      <tr><td class="n">Time to first closing<small>new agents, days</small></td><td>Industry average is around 200 days to full production</td><td class="m">Week 1</td><td class="g">Under 200</td></tr>
+      <tr><td class="n">Retention<small>agents staying, per quarter</small></td><td>Recruiting only counts if they stay</td><td class="m">Week 1</td><td class="g">Hold or improve</td></tr>
+      <tr><td class="n">Capacity<small>agents per hour of your time</small></td><td>This is the answer to "when do I hire"</td><td class="m">6.7</td><td class="g">13+</td></tr>
+    </table>
+  </div>
+
+  <div class="walk">
+    <b>If the numbers do not move</b>
+    <p>If these are not moving by day 60, we will be the first to tell you, and you walk. Month to month, no contract, no hard feelings. That is the whole reason there is a scoreboard.</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <span class="eyebrow">Your three options, side by side</span>
+  <h2>A bot, a hire, or us.</h2>
+  <p class="section-sub">You have three real ways to get this off your plate. Here is what each one actually does for the four things you named, and what it costs you if it does not work out.</p>
+
+  <div class="scrollx">
+  <table class="cmp">
+    <tr><th class="first">For your four items</th><th>A broker bot<small>$1,000 a month</small></th><th>A person in the office<small>$4,500 to $6,000 a month</small></th><th class="us">RunRate<small>$3,500 build, then your call</small></th></tr>
+    <tr><td class="first">Chases the check and pays the agent</td><td><span class="x">No</span></td><td><span class="m">Once trained</span></td><td class="us"><span class="y">Week 1</span></td></tr>
+    <tr><td class="first">Calls a new agent who has gone quiet</td><td><span class="x">No</span></td><td><span class="m">If they notice</span></td><td class="us"><span class="y">At every milestone</span></td></tr>
+    <tr><td class="first">Answers agent questions</td><td><span class="y">From your docs</span></td><td><span class="m">After learning your head</span></td><td class="us"><span class="y">First line during ramp</span></td></tr>
+    <tr><td class="first">Runs recruiting follow-up</td><td><span class="x">No</span></td><td><span class="x">Not their job</span></td><td class="us"><span class="y">Josh Goode, weekly</span></td></tr>
+    <tr><td class="first">Puts the CE session on and fills the room</td><td><span class="x">No</span></td><td><span class="y">Yes</span></td><td class="us"><span class="y">Yes</span></td></tr>
+    <tr><td class="first">Writes the SOPs so anyone can run it</td><td><span class="x">No</span></td><td><span class="x">Learns them from you</span></td><td class="us"><span class="y">Included, in plain English</span></td></tr>
+    <tr><td class="first">Five numbers, every month</td><td><span class="m">Questions only</span></td><td><span class="x">No</span></td><td class="us"><span class="y">The scoreboard</span></td></tr>
+    <tr><td class="first">Time to start</td><td><span class="y">Today</span></td><td><span class="x">2 to 3 months to find and train</span></td><td class="us"><span class="y">Kickoff next week</span></td></tr>
+    <tr><td class="first">Who manages it</td><td><span class="x">You</span></td><td><span class="x">You</span></td><td class="us"><span class="y">Us, until you say otherwise</span></td></tr>
+    <tr><td class="first">If it does not work</td><td><span class="m">You are still running it</span></td><td><span class="x">Severance, and start over</span></td><td class="us"><span class="y">Cancel any month, keep everything</span></td></tr>
+  </table>
+  </div>
+
+  <div class="proof">
+    <div class="pf"><div class="pk">Founders do the work</div><div class="pd">Danny Peña runs delivery. Josh Goode runs recruiting and strategy. The people on the call are the people in the build. No account manager in between.</div></div>
+    <div class="pf"><div class="pk">Built in the tools you already use</div><div class="pd">You build your own software. We work in the same tools, so nothing we hand you is a black box. You can open it, change it, or extend it yourself.</div></div>
+    <div class="pf"><div class="pk">Measured, or we leave</div><div class="pd">Baseline in week one, five numbers every month, and a walk clause at day 60 that we put in writing. Nobody else on this table offers that.</div></div>
+    <div class="pf"><div class="pk">Ten years of Jeffrey</div><div class="pd">You sold Jeffrey his house a decade ago and he brought us to you. That relationship is on the line for us too, which is why the scoreboard exists.</div></div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section>
+  <span class="eyebrow">What it costs</span>
+  <h2>One number to build it. Then it is your call.</h2>
+
+  <div class="price-card">
+    <div class="price-top">
+      <div><div class="price-num">$3,500</div></div>
+      <div class="price-terms">
+        The 30-day build, one time<br>
+        $1,500 to start · $2,000 when it is live<br>
+        <span class="no">No contract. Everything built is yours.</span>
+      </div>
+    </div>
+
+    <div class="price-cols">
+      <div class="inc">
+        <h3>What that covers</h3>
+        <ul>
+          <li>All four workstreams above, built and running within 30 days of kickoff</li>
+          <li>The written SOP for each one, in plain English, so anyone can run it</li>
+          <li>The scoreboard, with your baseline measured in week one</li>
+          <li>Founders on the build. Danny Peña runs delivery, Josh Goode runs recruiting and strategy</li>
+          <li>A standing weekly call for the 30 days, every decision visible</li>
+          <li>Training for whoever runs it after, you or someone in house, included</li>
+        </ul>
+      </div>
+      <div class="exc">
+        <h3>What it does not cover</h3>
+        <ul>
+          <li>Anything that interprets a contract, a disclosure or a legal deadline. That stays with you, by design</li>
+          <li>Consolidating your customer databases. We told you to leave it, and we meant it</li>
+          <li>Lead generation of any kind. You told us leads are not the problem</li>
+          <li>The four agent transfers still stuck on asset-manager relationships. Separate problem, separate conversation</li>
+          <li>Running it after day 30. That is a choice you make then, below</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-fine">
+      <strong>On software.</strong> Anything this runs on is billed to you directly, in your name. We do not mark it up and we take no commission from any vendor. You own every account. If you stop working with us, everything stays yours and keeps running.<br><br>
+      <strong>On the price.</strong> This is a first build of this exact shape for a brokerage, and the price reflects that. It is set so the decision is easy and the proof is in the scoreboard, not in the pitch.
+    </div>
+
+    <div class="day30">
+      <h3>At day 30, you pick one.</h3>
+      <div class="sub">Everything is built either way. The question is only who runs it.</div>
+      <div class="opts">
+        <div class="opt"><div class="ph">Option A</div><div class="pv">$0<small>/ month</small></div><div class="pn"><b>You run it.</b> The SOPs are yours, the systems are yours. We hand it over and step back.</div></div>
+        <div class="opt"><div class="ph">Option B</div><div class="pv">$0<small>/ month</small></div><div class="pn"><b>Someone in house runs it.</b> An agent who wants to step up, or a hire. We train them, included.</div></div>
+        <div class="opt rec"><div class="ph">Option C · what we would pick</div><div class="pv">$2,000<small>/ month</small></div><div class="pn"><b>We run it.</b> Check-ins, recruiting follow-up, payouts, CE logistics and the scoreboard. Month to month. Cancel any month.</div></div>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="ct">Option C against the two alternatives you have, per month</div>
+      <div class="crow"><div class="lb"><b>A broker bot</b>you manage it</div><div class="tr"><div class="fl" style="width:17%"></div></div><div class="v">$1,000</div></div>
+      <div class="crow us"><div class="lb"><b>RunRate</b>we run all four</div><div class="tr"><div class="fl" style="width:33%"></div></div><div class="v">$2,000</div></div>
+      <div class="crow"><div class="lb"><b>A person in the office</b>before you know what they can do</div><div class="tr"><div class="fl" style="width:100%"></div></div><div class="v">$4,500 to $6,000</div></div>
+      <div class="cn">The bot answers questions. It does not chase a check, call a stalled agent, or put a CE session on the calendar. The person in the office costs two to three times as much, and you spend the first months teaching them what we will have already written down.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXIT -->
+<section>
+  <div class="exit">
+    <span class="eyebrow">Where this goes</span>
+    <h2>A business you own, not one that owns you.</h2>
+    <p>You said you do not want to be working at 80. Whether this goes to your kids, to someone you step back from, or to a buyer, every one of those needs the same thing: <strong>a business that runs on written process instead of on you.</strong></p>
+    <p>Every SOP in this build is a page of that. Jeffrey sees it every day: businesses that cannot find a buyer because there was never a plan and the operations live in the owner's head. <strong>This is the first thirty days of getting them out of yours.</strong></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <span class="eyebrow">Next step</span>
+  <h2>Take the weekend.</h2>
+  <p class="sub2">You said you like to mull things over and check the numbers first. Do that. If it fits, the link below starts it and we kick off the week you pay. If it does not, tell us Wednesday and we will talk about what would.</p>
+  <a class="btn" href="https://buy.stripe.com/fZu00j7Hq7S8ei41uad7q01" target="_blank" rel="noopener">Start the build<small>$1,500 to start · $2,000 when live</small></a>
+  <br>
+  <div class="slot">
+    <div class="when">Wednesday, October 28<br>11:00am Mountain</div>
+    <div class="sub">Invite is in your inbox</div>
+  </div>
+  <p class="fallback">Questions before then? Reply to the email or text Danny. If Wednesday has moved, send two times that work and we will take either.</p>
+</div>
+
+</div>
+
+<footer>RUNRATE PARTNERS · PREPARED FOR HUNTER OF HOMES, ERA POWERED · OCTOBER 22, 2026<br>EVERY QUOTE ABOVE IS FROM JOSH AUSTIN ON THE OCTOBER 2, 7 AND 21 CALLS</footer>
+
+</body>
+</html>
