@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F9F7F6">
+<title>Hunter of Homes · Week One · RunRate Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F9F7F6;--bg2:#F1ECE6;--card:#FFFDFB;--ink:#1F2A24;--soft:#5A6560;--mute:#8A938E;--line:#DED6CC;--rust:#B5562A;--rust2:#D9875E;--rust-soft:#F3E6DB;--sage:#E6E8E4;--cream:#E0A27E;--green:#3E7A55;--green-soft:#E3EFE7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:'Libre Baskerville',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(38px,6vw,66px)} h1 em{font-style:italic;font-weight:400;color:var(--rust)}
+h2{font-size:clamp(28px,4vw,42px);margin-bottom:10px}
+h3{font-size:18px;font-weight:700;line-height:1.25}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:12px}
+.lede{font-size:18px;color:var(--soft);max-width:640px}
+section{padding:76px 0;border-top:1px solid var(--line)} section.alt{background:var(--bg2)}
+.small{font-size:13.5px;color:var(--soft)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.tag.est{color:var(--rust);background:var(--rust-soft)} .tag.have{color:var(--green);background:var(--green-soft)} .tag.add{color:#fff;background:var(--rust)}
+
+.hero{padding:56px 0 64px}
+.logo{height:46px;width:auto;margin-bottom:40px;display:block}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14.5px;color:var(--soft);margin:22px 0 0}
+
+/* audit grid */
+.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+.au{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.au .chk{width:30px;height:30px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center}
+.au .chk svg{width:16px;height:16px;stroke:var(--green);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.au h3{font-size:16px} .au p{font-size:14px;color:var(--soft)}
+.callout{margin-top:28px;font-size:21px;font-weight:600;max-width:820px} .callout span{color:var(--rust)}
+
+/* shows vs runs */
+.svr{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+.col{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.col.us{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.col h3{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:16px}
+.col.us h3{color:var(--cream)}
+.row{display:grid;grid-template-columns:1fr 24px 1fr;gap:12px;align-items:start;padding:14px 0;border-top:1px solid var(--line);font-size:15.5px}
+.col.us .row{border-color:#3A4740}
+.row:first-of-type{border-top:none}
+.row .a{color:var(--soft)} .col.us .row .a{color:#C9D1CB}
+.row .arr{color:var(--rust);font-weight:700;text-align:center;padding-top:1px}
+.row .b{font-weight:600}
+.col.us .row .b{color:var(--bg)}
+
+/* baseline */
+.tl{margin-top:32px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+.tl .hd{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.tl .hd b{font-size:16px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:8px}
+.days div{text-align:center;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding:6px 0;border-bottom:2px solid var(--line)}
+.days div.hot{color:var(--rust);border-color:var(--rust)}
+.lane{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:center;padding:10px 0}
+.lane .nm{font-size:14.5px;font-weight:600} .lane .nm small{display:block;font-weight:400;color:var(--soft);font-size:12.5px}
+.track{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;height:36px}
+.track i{display:block;border-radius:8px;background:var(--bg2);position:relative}
+.track i.on{background:var(--rust);opacity:.9}
+.track i.on.light{background:var(--rust2)}
+.track i.on::after{content:attr(data-l);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;color:#fff;letter-spacing:.04em;white-space:nowrap;overflow:hidden}
+.track i.on.ink{background:var(--ink);opacity:1}
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.sum div{background:var(--bg2);border-radius:14px;padding:16px 18px}
+.sum b{display:block;font-family:'Libre Baskerville',Georgia,serif;font-size:30px;line-height:1.1}
+.sum span{font-size:13.5px;color:var(--soft)}
+.sum b small{font-size:14px;font-family:'DM Sans',Arial,sans-serif;font-weight:600;color:var(--soft)}
+.tl .foot{margin-top:18px;font-size:13.5px;color:var(--soft)}
+
+/* spec */
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+.fields{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.fields table{width:100%;border-collapse:collapse;font-size:15px}
+.fields th{text-align:left;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding:14px 18px;background:var(--bg2);border-bottom:1px solid var(--line)}
+.fields td{padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.fields tr:last-child td{border-bottom:none}
+.fields td:first-child{font-weight:600;white-space:nowrap}
+.fields td:first-child code{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--rust);display:block;font-weight:500;margin-top:2px}
+.prompt{background:var(--ink);color:#E8ECE9;border-radius:20px;padding:22px 24px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;position:relative}
+.prompt .lab{font-family:'DM Sans',Arial,sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);margin-bottom:12px;display:block}
+.unlock{margin-top:18px;background:var(--rust-soft);border-radius:18px;padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.unlock div b{display:block;font-size:15.5px;margin-bottom:4px} .unlock div span{font-size:14px;color:var(--soft)}
+
+/* next */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.nx{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.nx h3{color:var(--rust);margin-bottom:12px;font-size:15px;letter-spacing:.1em;text-transform:uppercase}
+.nx ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.nx li{display:flex;gap:12px;font-size:16px;align-items:flex-start}
+.nx li svg{flex:none;width:18px;height:18px;margin-top:4px;stroke:var(--rust);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.money{margin-top:16px;background:var(--ink);color:var(--bg);border-radius:18px;padding:24px 28px;display:flex;gap:18px;align-items:center;font-size:17px;font-weight:600;line-height:1.4}
+.money svg{flex:none;width:28px;height:28px;stroke:var(--cream);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.close{background:var(--rust);color:#FBF4EE;padding:80px 0;border-top:none}
+.close .eyebrow{color:#FBE3D4} .close h2{font-size:clamp(30px,4.5vw,50px);max-width:820px}
+.close p{color:#FBE3D4;font-size:18px;margin-top:14px;max-width:620px}
+footer{padding:28px 0 44px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+@media (max-width:900px){.audit{grid-template-columns:repeat(2,1fr)}.unlock{grid-template-columns:1fr}}
+@media (max-width:680px){section{padding:54px 0}.svr,.spec,.next,.sum{grid-template-columns:1fr}.lane{grid-template-columns:1fr;gap:6px}.audit{grid-template-columns:1fr}.track i.on::after{font-size:9.5px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="https://hunterofhomes.info/assets/hunter-of-homes-logo-DUVXlMfr.png" alt="Hunter of Homes, ERA Powered">
+    <p class="eyebrow">Week one · After the kickoff</p>
+    <h1>You built more than we planned to.<br><em>Here's what's left.</em></h1>
+    <p class="lede" style="margin-top:18px">We went through every tab of the portal after Friday's call. The screens are there. What's missing isn't screens.</p>
+    <div class="meta"><span><b>Nov 9, 2026</b></span><span>From Danny · for Josh Austin</span><span>Next call Thu Nov 13, 11:00 MT</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What's in the portal today</p>
+    <h2>Already done. We won't build any of this.</h2>
+    <div class="audit">
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Every agent, every plan</h3><p>46 records, 14 commission plans, Legacy vs West Wind</p></div>
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Commission history</h3><p>Per agent, per closing, back to 2024</p></div>
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Cap progress + true split</h3><p>Agents can see their own numbers</p></div>
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Year over year charts</h3><p>Earnings, monthly GCI, transaction pace</p></div>
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>13-step onboarding checklist</h3><p>With per-agent progress and handbook e-sign</p></div>
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Meeting archive</h3><p>Weekly meetings with attendance</p></div>
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Excel import</h3><p>Template per agent, data mapper</p></div>
+      <div class="au"><div class="chk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Production export + YTD email</h3><p>One PDF per agent, send-all button</p></div>
+    </div>
+    <p class="callout">The portal <span>shows</span> what's going on. The gap is that <span>you're the only one acting on it.</span></p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">The gap</p>
+    <h2>What the screen shows, and what has to happen next</h2>
+    <p class="lede">Every one of these is a thing you do by hand today. That's the 6 hours. Starting this week, the right column is ours.</p>
+    <div class="svr">
+      <div class="col">
+        <h3>Today · the portal shows, you act</h3>
+        <div class="row"><span class="a">Averi is at 9 of 13</span><span class="arr">→</span><span class="b">You text her for a headshot</span></div>
+        <div class="row"><span class="a">Eric signed in August, no closing yet</span><span class="arr">→</span><span class="b">Nobody's noticed</span></div>
+        <div class="row"><span class="a">Check from title lands Monday</span><span class="arr">→</span><span class="b">You drive to the bank, cut checks Tuesday</span></div>
+        <div class="row"><span class="a">Agent asks "where's my check?"</span><span class="arr">→</span><span class="b">You look it up and reply</span></div>
+        <div class="row"><span class="a">46 agents listed, 37 real</span><span class="arr">→</span><span class="b">The numbers are a little off</span></div>
+      </div>
+      <div class="col us">
+        <h3>From here · the portal shows, we act</h3>
+        <div class="row"><span class="a">Averi is at 9 of 13</span><span class="arr">→</span><span class="b">We nudge her. You get a Monday note.</span></div>
+        <div class="row"><span class="a">Eric signed in August, no closing yet</span><span class="arr">→</span><span class="b">Flagged at day 60. We call him.</span></div>
+        <div class="row"><span class="a">Check lands Monday</span><span class="arr">→</span><span class="b">You approve on your phone. Money moves electronically.</span></div>
+        <div class="row"><span class="a">Agent asks "where's my check?"</span><span class="arr">→</span><span class="b">Their statement already says. We answer if not.</span></div>
+        <div class="row"><span class="a">46 agents listed, 37 real</span><span class="arr">→</span><span class="b">Cleaned up, kept clean.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The baseline · check to paid</p>
+    <h2>A typical week, as you described it Friday</h2>
+    <p class="lede">This is your own description, not a measurement yet. We'll confirm it against the Excel and the last 10 closings next week. <span class="tag est">Estimate</span></p>
+    <div class="tl">
+      <div class="hd"><b>One closing, Friday to paid</b><span class="small">days after closing</span></div>
+      <div class="days"><div class="hot">Fri · close</div><div>Sat</div><div>Sun</div><div class="hot">Mon · check</div><div class="hot">Tue</div><div>Wed</div><div>Thu</div></div>
+      <div class="lane"><div class="nm">Title runner delivers<small>check in your hand</small></div><div class="track"><i></i><i></i><i></i><i class="on ink" data-l="Received"></i><i></i><i></i><i></i></div></div>
+      <div class="lane"><div class="nm">You deposit, enter it 3 places<small>about 15 min of entry</small></div><div class="track"><i></i><i></i><i></i><i class="on" data-l="Bank + entry"></i><i></i><i></i><i></i></div></div>
+      <div class="lane"><div class="nm">Fruitland Tuesday handoff<small>most common</small></div><div class="track"><i></i><i></i><i></i><i></i><i class="on ink" data-l="Paid · 1 day"></i><i></i><i></i></div></div>
+      <div class="lane"><div class="nm">ICCU direct deposit<small>if the agent banks there</small></div><div class="track"><i></i><i></i><i></i><i></i><i class="on ink" data-l="Paid · 1 day"></i><i></i><i></i></div></div>
+      <div class="lane"><div class="nm">Mailed check<small>Boise agents</small></div><div class="track"><i></i><i></i><i></i><i></i><i class="on light" data-l="In the mail"></i><i class="on light" data-l=""></i><i class="on ink" data-l="Paid · ~3 days"></i></div></div>
+      <div class="sum">
+        <div><b>1 <small>day</small></b><span>Check received to paid, Tuesday handoff or ICCU</span></div>
+        <div><b>3 to 4 <small>days</small></b><span>Check received to paid, mailed</span></div>
+        <div><b>24 <small>hrs</small></b><span>Your target: "money hits their account within 24 hours," any agent, any bank</span></div>
+      </div>
+      <p class="foot">Closings that land midweek follow the same shape: check the next morning, paid the next Tuesday or by mail. The gap we're closing is the mail lane and the Tuesday wait, and Jeffery's working the bank side so that's possible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">The one thing to add · 5 minutes in Lovable</p>
+    <h2>Three fields, and the portal measures itself</h2>
+    <p class="lede">Right now a commission record has the closing date and the money. It doesn't know when the check arrived or when the agent got paid. Add these and "days to paid" shows up on its own, every month, no spreadsheet.</p>
+    <div class="spec">
+      <div class="fields">
+        <table>
+          <tr><th>Field</th><th>Type</th><th>Where it shows</th></tr>
+          <tr><td>Check received<code>check_received_date</code></td><td>Date, optional</td><td>Add Commission form, Commission History column</td></tr>
+          <tr><td>Agent paid<code>agent_paid_date</code></td><td>Date, optional</td><td>Same. Blank means not paid yet.</td></tr>
+          <tr><td>Payout method<code>payout_method</code></td><td>Dropdown: Fruitland Tuesday, ICCU deposit, Mailed check, Electronic</td><td>Same</td></tr>
+          <tr><td>Days to paid<code>computed</code></td><td>Agent paid minus check received</td><td>Column on Commission History. Average on the admin Performance tab, overall and by method.</td></tr>
+        </table>
+      </div>
+      <div class="prompt"><span class="lab">Paste into Lovable</span>On the commission record (the Add Commission form and the Commission History table on each agent page), add three optional fields: "Check received" (date), "Agent paid" (date), and "Payout method" (select: Fruitland Tuesday, ICCU deposit, Mailed check, Electronic). Show all three as columns in Commission History. Add a computed column "Days to paid" = Agent paid minus Check received, blank if either date is missing. On the admin Performance tab, add a card "Check to paid" showing the average Days to paid for the last 30 days, plus the average by payout method. Existing records stay unchanged with the new fields blank. Admin can edit these fields on any record.</div>
+    </div>
+    <div class="unlock">
+      <div><b>What it unlocks</b><span>Scoreboard number #2, straight from your data, no Excel</span></div>
+      <div><b>What it costs you</b><span>Two dates per closing, about 10 seconds, on the Monday you already enter it</span></div>
+      <div><b>What we do with it</b><span>Baseline from the last 10 closings, then watch it drop as payouts go electronic</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">This week</p>
+    <h2>Who does what before Thursday</h2>
+    <div class="next">
+      <div class="nx"><h3>You</h3><ul>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Add the three fields (prompt above)</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Send the Excel</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Jot minutes on agent questions, each day, rough is fine</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Send Jeffery two times for the treasury officer call</li>
+      </ul></div>
+      <div class="nx"><h3>Us</h3><ul>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Baseline the last 10 closings once the Excel lands</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Roster cleanup list: duplicates, departed, who's really active</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Ramp view: every agent hired since June, days since handbook, closed yet or not</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>A plan for weeks 3 and 4, since recruiting and CE wait. We agree on it together Thursday.</li>
+      </ul></div>
+    </div>
+    <div class="money"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Same as always: you approve and pay every payout. We never hold or move your money or any agent's commission.</div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow">The short version</p>
+    <h2>You built the car. We're the driver.</h2>
+    <p>The portal already shows what needs doing. From this week, somebody other than you does it.</p>
+  </div>
+</section>
+
+<footer><div class="wrap">RunRate Partners · Prepared for Hunter of Homes, ERA Powered · November 2026</div></footer>
+</body>
+</html>
