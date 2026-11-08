@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F9F7F6">
+<title>Hunter of Homes · Monday Closeout · RunRate Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F9F7F6;--bg2:#F1ECE6;--card:#FFFDFB;--ink:#1F2A24;--soft:#5A6560;--mute:#8A938E;--line:#DED6CC;--rust:#B5562A;--rust2:#D9875E;--rust-soft:#F3E6DB;--sage:#E6E8E4;--cream:#E0A27E;--green:#3E7A55;--green-soft:#E3EFE7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:'Libre Baskerville',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(36px,5.5vw,58px)} h1 em{font-style:italic;font-weight:400;color:var(--rust)}
+h2{font-size:clamp(24px,3.5vw,34px);margin-bottom:8px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:12px}
+.lede{font-size:17.5px;color:var(--soft);max-width:600px}
+section{padding:56px 0;border-top:1px solid var(--line)} section.alt{background:var(--bg2)}
+.hero{padding:52px 0 56px}
+.logo{height:44px;width:auto;margin-bottom:36px;display:block}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--soft);margin-top:20px}
+
+/* when strip */
+.when{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}
+.wh{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.wh b{display:block;font-family:'Libre Baskerville',Georgia,serif;font-size:22px;line-height:1.1;margin-bottom:4px}
+.wh span{font-size:13.5px;color:var(--soft)}
+.wh.hi{background:var(--ink);border-color:var(--ink)} .wh.hi b{color:var(--cream)} .wh.hi span{color:#C9D1CB}
+
+/* steps */
+.phase{margin-top:36px}
+.phase h3{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.phase h3 small{font-weight:600;color:var(--mute);letter-spacing:0;text-transform:none;font-size:13px}
+.step{display:grid;grid-template-columns:34px 1fr auto;gap:16px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:8px}
+.box{width:26px;height:26px;border:2.5px solid var(--rust);border-radius:7px;margin-top:2px}
+.step .t{font-size:16.5px;font-weight:600;line-height:1.3}
+.step .d{font-size:14px;color:var(--soft);margin-top:4px;line-height:1.45}
+.step .d code{font-family:'DM Sans',Arial,sans-serif;background:var(--rust-soft);color:var(--rust);padding:1px 7px;border-radius:6px;font-weight:600;font-size:13px}
+.step .m{font-size:12.5px;font-weight:700;color:var(--mute);white-space:nowrap;padding-top:4px}
+.step.new{border-color:var(--rust);border-width:2px}
+.step.new .m{color:var(--rust)}
+.step.old{opacity:.75}
+.step.old .box{border-style:dashed;border-color:var(--mute)}
+
+/* pay lanes */
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.ln{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.ln b{display:block;font-size:15.5px;margin-bottom:4px}
+.ln p{font-size:14px;color:var(--soft);line-height:1.45}
+.ln .d{font-family:'Libre Baskerville',Georgia,serif;font-size:22px;color:var(--rust);margin-top:8px}
+.ln .d small{font-family:'DM Sans',Arial,sans-serif;font-size:13px;color:var(--mute)}
+
+/* don't */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.rule{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:15px}
+.rule b{display:block;margin-bottom:4px}
+.rule span{color:var(--soft);font-size:14px}
+.money{margin-top:16px;background:var(--ink);color:var(--bg);border-radius:16px;padding:22px 26px;display:flex;gap:16px;align-items:center;font-size:16.5px;font-weight:600;line-height:1.4}
+.money svg{flex:none;width:26px;height:26px;stroke:var(--cream);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.close{background:var(--rust);color:#FBF4EE;padding:64px 0;border-top:none}
+.close .eyebrow{color:#FBE3D4} .close h2{font-size:clamp(28px,4vw,42px);max-width:760px}
+.close p{color:#FBE3D4;font-size:17px;margin-top:12px;max-width:600px}
+footer{padding:26px 0 40px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+@media print{section{padding:24px 0;break-inside:avoid}.hero{padding:20px 0}.close,footer,.logo{display:none}.step{break-inside:avoid}body{font-size:14px}}
+@media (max-width:760px){.when{grid-template-columns:repeat(2,1fr)}.lanes,.rules{grid-template-columns:1fr}.step{grid-template-columns:30px 1fr}.step .m{grid-column:2}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="https://hunterofhomes.info/assets/hunter-of-homes-logo-DUVXlMfr.png" alt="Hunter of Homes, ERA Powered">
+    <p class="eyebrow">Closeout checklist · v1</p>
+    <h1>A check came in.<br><em>Here's the Monday.</em></h1>
+    <p class="lede" style="margin-top:16px">Your process, as you described it Friday, written down once. Same order every time. Two new steps marked in red, they take 10 seconds and they're what makes the scoreboard real.</p>
+    <div class="meta"><span><b>Nov 8, 2026</b></span><span>From Danny · for Josh Austin</span><span>Open this when the runner shows up</span></div>
+    <div class="when">
+      <div class="wh"><b>Fri</b><span>Most closings. Title cuts the check.</span></div>
+      <div class="wh hi"><b>Mon</b><span>Runner drops it off. This checklist, start to finish.</span></div>
+      <div class="wh"><b>Tue</b><span>Agents paid. Fruitland meeting.</span></div>
+      <div class="wh"><b>~25 min</b><span>per check, today. We time it to prove it drops.</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The checklist</p>
+    <h2>Twelve steps, three phases</h2>
+    <p class="lede">Check the box, move on. Nothing here is new to you except the two red ones.</p>
+
+    <div class="phase">
+      <h3>1 · Receive <small>· about 2 min</small></h3>
+      <div class="step"><span class="box"></span><div><div class="t">Check in hand. Match it to the closing.</div><div class="d">Property, agent, amount against the closing statement. If anything's off, it stops here, not after it's deposited.</div></div><span class="m">1 min</span></div>
+      <div class="step new"><span class="box"></span><div><div class="t">Write down today's date as <code>Check received</code></div><div class="d">On the commission record in the portal. This is one of the three new fields. It's the start of the clock.</div></div><span class="m">10 sec · NEW</span></div>
+    </div>
+
+    <div class="phase">
+      <h3>2 · Enter <small>· about 15 min today, less when Excel retires</small></h3>
+      <div class="step"><span class="box"></span><div><div class="t">Look up the agent's plan in the portal</div><div class="d">Manage Agents → their plan. Legacy 80/20 with the $10K cap, or one of the 13 West Wind plans. Don't do this from memory, half the roster is on something other than 80/20.</div></div><span class="m">1 min</span></div>
+      <div class="step"><span class="box"></span><div><div class="t">Run the split</div><div class="d">Agent share, HoH share, ERA 5%. Net any referral out first. Check cap progress: if they're capped, HoH's cut is zero and only the ERA 5% comes out.</div></div><span class="m">2 min</span></div>
+      <div class="step"><span class="box"></span><div><div class="t">Enter it in the portal</div><div class="d">Add Commission on the agent's page: date, property, price, gross, split, <code>Payout method</code>. The portal is home base. This is the entry that counts.</div></div><span class="m">4 min</span></div>
+      <div class="step old"><span class="box"></span><div><div class="t">Enter it in the Excel</div><div class="d">Same numbers, agent's tab. Keep doing this until portal and Excel match for a month or two. Then this step goes away. Your call when.</div></div><span class="m">4 min · until retired</span></div>
+      <div class="step"><span class="box"></span><div><div class="t">Enter it in ERA Dash</div><div class="d">Required until ERA swaps the system in Jan or Feb. Nothing we change here.</div></div><span class="m">4 min</span></div>
+    </div>
+
+    <div class="phase">
+      <h3>3 · Pay <small>· same day if you can</small></h3>
+      <div class="step"><span class="box"></span><div><div class="t">Deposit the check</div><div class="d">Mobile deposit if it's under the $20K limit and you can live with the hold. Branch if not. Jeffery's working on making this step disappear.</div></div><span class="m">5 to 30 min</span></div>
+      <div class="step"><span class="box"></span><div><div class="t">You approve the payout</div><div class="d">Amount, agent, method. Nobody pays an agent but you. That doesn't change, ever.</div></div><span class="m">1 min</span></div>
+      <div class="step"><span class="box"></span><div><div class="t">Pay the agent, one of three ways</div><div class="d">See the lanes below. Pick the fastest one that works for that agent.</div></div><span class="m">varies</span></div>
+      <div class="step new"><span class="box"></span><div><div class="t">Write down the date as <code>Agent paid</code></div><div class="d">The second new field. The portal now knows how many days that check took. Every month, that number shows up on the scoreboard without anyone adding anything up.</div></div><span class="m">10 sec · NEW</span></div>
+      <div class="step"><span class="box"></span><div><div class="t">File the hard copy</div><div class="d">You print everything at the end of a transaction. Keep doing it. It's your backup and it's a good one.</div></div><span class="m">2 min</span></div>
+    </div>
+
+    <div class="lanes">
+      <div class="ln"><b>Fruitland Tuesday</b><p>Hand the check over at the meeting. Most common today.</p><div class="d">1 <small>day after check in</small></div></div>
+      <div class="ln"><b>ICCU direct deposit</b><p>If the agent banks there. Branch in Star.</p><div class="d">1 <small>day</small></div></div>
+      <div class="ln"><b>Mailed check</b><p>Boise agents, ERA side.</p><div class="d">3 to 4 <small>days. The lane we're closing.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Two rules</p>
+    <h2>What never changes</h2>
+    <div class="rules">
+      <div class="rule"><b>The portal is the record.</b><span>If Excel and portal ever disagree, the portal wins once you've said it's trusted. Until then, Excel is the check, not the source.</span></div>
+      <div class="rule"><b>Don't skip the two dates.</b><span>Every other step was already happening. The two red ones are the only new habit, and they're the whole measurement.</span></div>
+    </div>
+    <div class="money"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>You approve and pay every payout. We never hold or move your money or any agent's commission.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What changes next</p>
+    <h2>Where this checklist is headed</h2>
+    <div class="rules">
+      <div class="rule"><b>Excel step retires</b><span>When portal and Excel have matched for a stretch you're happy with. Step count drops to 11, entry time drops by about 4 minutes.</span></div>
+      <div class="rule"><b>Deposit step shrinks</b><span>Jeffery's treasury conversation: higher mobile limit, or a scanner, or ACH straight from title. The drive to the branch goes away.</span></div>
+      <div class="rule"><b>Mail lane closes</b><span>Electronic payout for agents who don't bank at ICCU. Money in their account next day. The 3 to 4 days becomes 1.</span></div>
+      <div class="rule"><b>Dash gets replaced</b><span>ERA's new system, Jan or Feb. We'll rewrite that one step when it lands.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow">The point</p>
+    <h2>Same Monday you already do. Two dates added. The scoreboard fills itself in.</h2>
+    <p>Print it, tape it by the desk, or keep the link open. Version 2 comes out when the Excel step retires.</p>
+  </div>
+</section>
+
+<footer><div class="wrap">RunRate Partners · Prepared for Hunter of Homes, ERA Powered · November 2026 · Closeout checklist v1</div></footer>
+</body>
+</html>
