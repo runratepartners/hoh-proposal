@@ -101,6 +101,32 @@ section{padding:76px 0;border-top:1px solid var(--line)} section.alt{background:
 footer{padding:28px 0 44px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
 @media (max-width:900px){.audit{grid-template-columns:repeat(2,1fr)}.unlock{grid-template-columns:1fr}}
 @media (max-width:680px){section{padding:54px 0}.svr,.spec,.next,.sum{grid-template-columns:1fr}.lane{grid-template-columns:1fr;gap:6px}.audit{grid-template-columns:1fr}.track i.on::after{font-size:9.5px}}
+
+.sub{font-family:'Libre Baskerville',Georgia,serif;font-size:26px;font-weight:700;margin:48px 0 10px}
+.tblwrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:18px}
+.dt{width:100%;border-collapse:collapse;font-size:14.5px;min-width:760px}
+.dt th{text-align:left;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding:14px 16px;background:var(--bg2);border-bottom:1px solid var(--line);white-space:nowrap}
+.dt td{padding:13px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+.dt tr:last-child td{border-bottom:none}
+.b{display:inline-block;font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:999px;white-space:nowrap}
+.b-flag{background:#F6DDD3;color:#8E3A17}.b-warn{background:var(--rust-soft);color:var(--rust)}.b-ok{background:var(--green-soft);color:var(--green)}.b-ramp{background:var(--sage);color:var(--ink)}.b-exp{background:var(--bg2);color:var(--soft)}
+.ros,.rec{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:stretch;margin-top:8px}
+.rec{grid-template-columns:1fr 1fr 1fr}
+.rtile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.rtile b{display:block;font-family:'Libre Baskerville',Georgia,serif;font-size:34px;line-height:1.05}
+.rtile span{font-size:13.5px;color:var(--soft)}
+.rtile.hi{background:var(--ink);border-color:var(--ink)} .rtile.hi b{color:var(--cream)} .rtile.hi span{color:#C9D1CB}
+.rarrow{align-self:center;color:var(--rust);font-weight:700;font-size:22px}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.rcard h3{font-size:15.5px;display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}
+.rcard h3 .n{font-family:'Libre Baskerville',Georgia,serif;font-size:22px;color:var(--rust)}
+.rcard p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.rcard p+p{margin-top:8px}
+.rcard ul{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px;margin:8px 0}
+.rcard .ask{color:var(--ink);font-weight:600;margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.note{font-size:14px;color:var(--soft);margin-top:14px;max-width:900px}
+@media (max-width:760px){.ros{grid-template-columns:1fr}.rarrow{display:none}.rec,.rgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -159,11 +185,69 @@ footer{padding:28px 0 44px;font-size:12px;letter-spacing:.12em;text-transform:up
   </div>
 </section>
 
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Done this weekend</p>
+    <h2>Three things we already ran</h2>
+    <p class="lede">From your portal and the Excel you sent Saturday. Nothing here is a plan. It's what we found.</p>
+
+    <h3 class="sub">1 · The ramp board</h3>
+    <p class="small" style="margin-bottom:14px">Every agent who signed the handbook this year, where they are today. 3 are past day 60 with no closing. That's the list we start calling this week.</p>
+    <div class="tblwrap"><table class="dt"><tr><th>Agent</th><th>Signed handbook</th><th>Days in</th><th>Checklist</th><th>2026 closings</th><th>First closing</th><th>Where they stand</th></tr>
+<tr><td><b>Jennifer Essig</b></td><td>Jul 22</td><td>108</td><td>8/13</td><td>0</td><td>—</td><td><span class="b b-flag">Day 108, no closing yet</span></td></tr>
+<tr><td><b>Dylan Pease</b></td><td>Jul 31</td><td>99</td><td>8/13</td><td>0</td><td>—</td><td><span class="b b-flag">Day 99, no closing yet</span></td></tr>
+<tr><td><b>Eric Barnabe</b></td><td>Aug 05</td><td>94</td><td>10/13</td><td>0</td><td>—</td><td><span class="b b-flag">Day 94, no closing yet</span></td></tr>
+<tr><td><b>Heidi Hodgins</b></td><td>Jul 29</td><td>101</td><td>8/13</td><td>0</td><td>Sep (Excel only)</td><td><span class="b b-warn">1 closing in Excel, 0 in portal</span></td></tr>
+<tr><td><b>Averi Lopez</b></td><td>Oct 21</td><td>17</td><td>9/13</td><td>0</td><td>—</td><td><span class="b b-ramp">Ramping, on track</span></td></tr>
+<tr><td><b>McKenze Nichols</b></td><td>Mar 26</td><td>226</td><td>7/13</td><td>1</td><td>Jul</td><td><span class="b b-ok">Closed · first deal in</span></td></tr>
+<tr><td><b>Skilar Goodrich</b></td><td>Jul 22</td><td>108</td><td>6/13</td><td>1</td><td>Aug</td><td><span class="b b-ok">Closed · first deal in</span></td></tr>
+<tr><td><b>Travis B.</b></td><td>Apr 23</td><td>198</td><td>12/13</td><td>7</td><td>Jan</td><td><span class="b b-exp">Experienced, settled in</span></td></tr>
+<tr><td><b>Kaitlyn Friend</b></td><td>Jun 17</td><td>143</td><td>11/13</td><td>19</td><td>Jan</td><td><span class="b b-exp">Experienced, settled in</span></td></tr>
+<tr><td><b>Karen Pestka</b></td><td>Jul 21</td><td>109</td><td>13/13</td><td>4</td><td>Sep</td><td><span class="b b-exp">Experienced, settled in</span></td></tr>
+</table></div>
+    <p class="note">Also in progress without a signed handbook: Alexis Woods 5/13, Jason Hopkins 12/13, Paula Christine Miller 6/13. The agent getting fingerprinted this week joins the board the day she signs.</p>
+
+    <h3 class="sub">2 · The roster, reconciled</h3>
+    
+<div class="ros">
+  <div class="rtile"><b>46</b><span>records in the portal</span></div>
+  <div class="rarrow">→</div>
+  <div class="rtile"><b>43</b><span>after 2 duplicates and 1 admin login come out</span></div>
+  <div class="rarrow">→</div>
+  <div class="rtile hi"><b>37 to 38</b><span>your count on Friday. The 5 to 6 to confirm are below.</span></div>
+</div>
+<div class="rgrid">
+  <div class="rcard"><h3>Closed a deal in 2026 <span class="n">22</span></h3><p>Dan Swenson, Daniel, Daphne, Dave, Diana, Gary Hampton, Heather, Jessica Tanner, Kaitlyn Friend, Karen Pestka, Lara, Margaret, McKenze Nichols, Nick Cracolice, Sandelle, Sara, Shay, Skilar Goodrich, Tobby, Travis B., Vern Manthie, ilene Johnson</p></div>
+  <div class="rcard"><h3>Duplicates to merge <span class="n">2</span></h3><p><b>Terry Silsby</b><br><small>silsbysolutions@gmail.com · silsbysoloutions@gmail.com</small></p><p><b>Paula Miller / Paula Christine Miller</b><br><small>paula.oreidahomes@yahoo.com · paula_oreidahomes@yahoo.com</small></p></div>
+  <div class="rcard"><h3>In the portal, no 2026 closing, no handbook date <span class="n">16</span></h3><p>Alexis Woods, Bob Hurtt, Emilee Wilks, Genny, James McMahan, Jason Hopkins, Josu Amuchastegui, Kelley Paynter, Matthew, Nick Cracolice Jr., Paula Christine Miller, Paula Miller, Robbie Nicolosi, Ron Paynter, Terry Silsby, Tracey Provost</p><p class="ask">Which of these are the 5 who left? We mark them inactive and the count is right.</p></div>
+  <div class="rcard"><h3>In the Excel, not in the portal <span class="n">16</span></h3><p><b>Own tab:</b> Travis E. (2 closings, Jan to Feb), Mardi, Heidi (legacy), Renee, Hyrum</p><p><b>Splits tab only:</b> Kerri, Lisa, Rhonda, Ashley, Mindy, Jenni, Cara, Laramie, Joel, Megan, Adam</p><p class="ask">Mostly departed or referral-only. Confirm and they drop off the active list.</p></div>
+</div>
+
+    <h3 class="sub">3 · Excel vs portal</h3>
+    
+<div class="rec">
+  <div class="rtile"><b>$211,906</b><span>Excel · 2026 brokerage revenue, your own deals included</span></div>
+  <div class="rtile"><b>$203,871</b><span>Portal · same agents</span></div>
+  <div class="rtile hi"><b>4%</b><span>apart. 8 of 27 agents match to the dollar.</span></div>
+</div>
+<div class="rgrid">
+  <div class="rcard"><h3>Closings in the Excel that aren't in the portal <span class="n">8</span></h3>
+  <ul><li><b>Karen Pestka</b> · 1 closing</li><li><b>Nick Cracolice</b> · 1 closing</li><li><b>Daphne</b> · 1 closing</li><li><b>Heidi Hodgins</b> · 1 closing</li><li><b>Bob Hurtt</b> · 1 closing</li><li><b>Kaitlyn Friend</b> · 1 closing</li><li><b>Travis B.</b> · 1 closing</li><li><b>Daniel</b> · 1 closing</li></ul>
+  <p class="ask">Enter these and the counts line up. Bob and Heidi have no portal entries at all.</p></div>
+  <div class="rcard"><h3>Portal reads higher on 11 agents</h3>
+  <p>Each one by about the ERA 5%. The portal counts the ERA fee as brokerage revenue. The Excel keeps it in its own column. Same money, different bucket. One rule on which is right and this goes away.</p>
+  <ul><li><b>Heather</b> · $3,149 higher in portal</li><li><b>Tobby</b> · $1,085 higher in portal</li><li><b>Margaret</b> · $825 higher in portal</li><li><b>Jessica Tanner</b> · $542 higher in portal</li><li><b>Sara</b> · $510 higher in portal</li></ul></div>
+</div>
+<p class="note">Your own production: the Excel counts all of it as brokerage. The portal treats $14,746 of it as an agent split. That one line is most of the remaining gap.</p>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <p class="eyebrow">The baseline · check to paid</p>
     <h2>A typical week, as you described it Friday</h2>
-    <p class="lede">This is your own description, not a measurement yet. We'll confirm it against the Excel and the last 10 closings next week. <span class="tag est">Estimate</span></p>
+    <p class="lede">This is your own description, not a measurement yet. The Excel has closing months, not dates, so the real number starts the day the three fields below go in. <span class="tag est">Estimate</span></p>
     <div class="tl">
       <div class="hd"><b>One closing, Friday to paid</b><span class="small">days after closing</span></div>
       <div class="days"><div class="hot">Fri · close</div><div>Sat</div><div>Sun</div><div class="hot">Mon · check</div><div class="hot">Tue</div><div>Wed</div><div>Thu</div></div>
@@ -214,14 +298,13 @@ footer{padding:28px 0 44px;font-size:12px;letter-spacing:.12em;text-transform:up
     <div class="next">
       <div class="nx"><h3>You</h3><ul>
         <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Add the three fields (prompt above)</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Send the Excel</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Jot minutes on agent questions, each day, rough is fine</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Send Jeffery two times for the treasury officer call</li>
       </ul></div>
       <div class="nx"><h3>Us</h3><ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Baseline the last 10 closings once the Excel lands</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Roster cleanup list: duplicates, departed, who's really active</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Ramp view: every agent hired since June, days since handbook, closed yet or not</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Start calling the flagged agents on the ramp board</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Enter the 8 missing closings in the portal, or hand you the list</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Mark the departed agents inactive once you confirm the list</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>A plan for weeks 3 and 4, since recruiting and CE wait. We agree on it together Thursday.</li>
       </ul></div>
     </div>
