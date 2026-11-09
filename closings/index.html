@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F9F7F6">
+<title>Hunter of Homes · Missing Closings · RunRate Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F9F7F6;--bg2:#F1ECE6;--card:#FFFDFB;--ink:#1F2A24;--soft:#5A6560;--mute:#8A938E;--line:#DED6CC;--rust:#B5562A;--rust-soft:#F3E6DB;--cream:#E0A27E;--green:#3E7A55;--green-soft:#E3EFE7;--amber:#9A6B1F;--amber-soft:#F6EBD4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:'Libre Baskerville',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(34px,5vw,54px)} h1 em{font-style:italic;font-weight:400;color:var(--rust)}
+h2{font-size:clamp(22px,3.2vw,30px);margin-bottom:6px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:12px}
+.lede{font-size:17.5px;color:var(--soft);max-width:640px}
+section{padding:48px 0;border-top:1px solid var(--line)} section.alt{background:var(--bg2)}
+.hero{padding:48px 0 44px}
+.logo{height:44px;width:auto;margin-bottom:32px;display:block}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--soft);margin-top:18px}
+
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.tile b{display:block;font-family:'Libre Baskerville',Georgia,serif;font-size:30px;line-height:1.05;margin-bottom:6px}
+.tile span{font-size:13.5px;color:var(--soft);line-height:1.35;display:block}
+.tile.hi{background:var(--ink);border-color:var(--ink)} .tile.hi b{color:var(--cream)} .tile.hi span{color:#C9D1CB}
+.tile.g b{color:var(--green)} .tile.a b{color:var(--amber)}
+
+table{width:100%;border-collapse:separate;border-spacing:0;margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px}
+th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:700;text-align:left;padding:12px 11px;background:var(--bg2);border-bottom:1px solid var(--line)}
+td{padding:13px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td b{font-weight:600}
+td .sub{display:block;font-size:12.5px;color:var(--mute);margin-top:2px}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;letter-spacing:.02em;white-space:nowrap}
+.t-ok{background:var(--green-soft);color:var(--green)} .t-ask{background:var(--amber-soft);color:var(--amber)} .t-no{background:var(--rust-soft);color:var(--rust)}
+tr.ask td{background:#FBF7EE}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h3{font-size:16.5px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.card p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.card ul{list-style:none;margin-top:10px}
+.card li{font-size:14.5px;padding:7px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+.card li span{color:var(--soft)}
+.card.warn{border-color:var(--amber);border-width:2px}
+
+.how{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
+.hw{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.hw small{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:700;margin-bottom:6px}
+.hw b{display:block;font-size:15px;line-height:1.3}
+.hw span{display:block;font-size:13px;color:var(--soft);margin-top:4px;line-height:1.4}
+.hw.hi{border-color:var(--rust);border-width:2px}
+
+.note{font-size:14px;color:var(--soft);margin-top:16px;max-width:720px}
+.close{padding:44px 0 56px;text-align:left}
+.close p{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(20px,2.6vw,26px);line-height:1.35;max-width:720px}
+.close p em{color:var(--rust);font-style:italic}
+footer{padding:26px 0 40px;font-size:13px;color:var(--mute);border-top:1px solid var(--line)}
+@media (max-width:760px){.tiles{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.how{grid-template-columns:1fr 1fr}table{font-size:13px}th,td{padding:10px 10px}}
+@media print{body{font-size:13px}section{padding:20px 0;break-inside:avoid}.hero{padding:16px 0}.tile,.card,table{box-shadow:none}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <img class="logo" src="https://hunterofhomes.info/assets/hunter-of-homes-logo-DUVXlMfr.png" alt="Hunter of Homes">
+  <p class="eyebrow">Week one · Excel vs portal</p>
+  <h1>Closings in your Excel that <em>aren't in the portal</em>, ready to type in.</h1>
+  <p class="lede">We lined up every agent's tab against their portal page and subtracted. Where the leftover matched one row to the penny, that's the missing closing. Where it didn't, we say so instead of guessing.</p>
+  <div class="meta"><span>Hunter of Homes · ERA Powered</span><span>Prepared by RunRate Partners</span><span>Nov 9, 2026</span><span>Source: 2026 HOH Payroll.xlsx and jointhehunt.lovable.app</span></div>
+  <div class="tiles">
+    <div class="tile hi"><b>4</b><span>closings missing from the portal</span></div>
+    <div class="tile g"><b>3</b><span>confirmed to the dollar. Type these in today.</span></div>
+    <div class="tile a"><b>1</b><span>closing sitting on three tabs. Needs your call first.</span></div>
+    <div class="tile"><b>2</b><span>we listed Saturday that aren't missing after all. Details below.</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <p class="eyebrow">Ready to enter</p>
+  <h2>Three closings, confirmed to the penny</h2>
+  <p class="lede">For each one, the agent's Excel total minus their portal total equals this row exactly. No judgment call needed.</p>
+  <table>
+    <thead><tr><th>Agent</th><th>Property</th><th>Closed</th><th class="num">Sale price</th><th class="num">Gross commission</th><th class="num">Agent split</th><th class="num">HoH</th><th class="num">ERA 5%</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><b>Daphne</b></td><td>19684 Newell Way</td><td>July</td><td class="num">$379,900</td><td class="num">$11,399.97</td><td class="num">$8,799.11</td><td class="num">$1,709.99</td><td class="num">$569.99</td><td><span class="tag t-ok">Exact match</span></td></tr>
+      <tr><td><b>Travis B.</b></td><td>8393 S Tyrion Way</td><td>August</td><td class="num">$524,900</td><td class="num">$14,894.70</td><td class="num">$11,915.76</td><td class="num">$2,234.21</td><td class="num">$744.74</td><td><span class="tag t-ok">Exact match</span></td></tr>
+      <tr><td><b>Bob Hurtt</b></td><td>14072 Donald Dr.</td><td>October</td><td class="num">$365,000</td><td class="num">$10,950.00</td><td class="num">$8,103.00</td><td class="num">$2,190.00</td><td class="num">$657.00</td><td><span class="tag t-ok">Only closing on tab</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note">Your Excel tracks the closing month, not the day. The portal's Add Commission form wants a date. Pull the real one from the closing file or ERA Dash, or use the 1st of the month and we'll true it up later. Either way, the dollars are what the scoreboard reads.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="eyebrow">Needs your call</p>
+  <h2>One closing, three tabs: 511 Chestnut</h2>
+  <p class="lede">Karen, Nick Sr. and Heidi H each have 511 Chestnut (September, $75,000) on their tab, and it's missing from the portal on all three. Every tab shows the full $2,250 gross, but the splits underneath don't add up to one deal, so we didn't enter anything.</p>
+  <table>
+    <thead><tr><th>Tab</th><th>Property</th><th>Closed</th><th class="num">Gross on tab</th><th class="num">Agent split</th><th class="num">HoH</th><th class="num">ERA</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr class="ask"><td><b>Karen Pestka</b></td><td>511 Chestnut</td><td>September</td><td class="num">$2,250.00</td><td class="num">$1,890.00</td><td class="num">$225.00</td><td class="num">$135.00</td><td><span class="tag t-ask">Missing from portal</span></td></tr>
+      <tr class="ask"><td><b>Nick Cracolice Sr.</b></td><td>511 Chestnut</td><td>September</td><td class="num">$2,250.00</td><td class="num">$2,025.00</td><td class="num">$225.00</td><td class="num">$112.50</td><td><span class="tag t-ask">Missing from portal</span></td></tr>
+      <tr class="ask"><td><b>Heidi Hodgins</b></td><td>511 Chestnut</td><td>September</td><td class="num">$2,250.00</td><td class="num">$1,665.00</td><td class="num">$450.00</td><td class="num">$135.00</td><td><span class="tag t-ask">Missing from portal</span><span class="sub">Referral marked "x" on her tab</span></td></tr>
+    </tbody>
+  </table>
+  <div class="cards">
+    <div class="card warn"><h3>The question for you</h3>
+      <p>Was 511 Chestnut one $2,250 commission split among the three, or did each of them earn $2,250 on it? The three tabs together show $5,580 to agents on a $2,250 deal, so at least one of those tabs is a placeholder. Tell us how it actually paid out and we'll give you the exact three lines to enter, or enter them ourselves.</p></div>
+    <div class="card"><h3>Why it matters more than $2,250</h3>
+      <p>Karen and Nick Sr. share all four September closings, full gross on each tab, and the portal already carries three of them under both names. If they each represented a side, that's right. If it's one deal written twice, the scoreboard counts it twice. You know which. One rule for shared deals now saves fixing a year of them later.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Correction from Saturday</p>
+  <h2>Two we listed as missing that aren't</h2>
+  <p class="lede">Saturday's page said eight. When we went row by row, two of them don't hold up. You'd rather hear that from us than find it.</p>
+  <div class="cards">
+    <div class="card"><h3>Kaitlyn Friend <span class="tag t-no">Not missing</span></h3>
+      <p>19 real closings in the Excel, 19 in the portal. Her tab has a $0 duplicate row for 5775 Denver Rd that we counted on Saturday. The counts match.</p>
+      <ul><li>Excel agent total <span>$100,992</span></li><li>Portal agent total <span>$94,882</span></li><li>Gap <span>$6,110, no single row explains it</span></li></ul>
+      <p style="margin-top:10px">That gap is a dollars problem, not a missing closing. Most likely a referral payout to Lara entered differently in the two places. We'll chase it in week two.</p></div>
+    <div class="card"><h3>Daniel <span class="tag t-ask">Probably one small row</span></h3>
+      <p>31 rows in the Excel, 30 in the portal, but the dollars are within $470 of each other across $197,000. The one row that's likely missing is small.</p>
+      <ul><li>Likely candidate <span>Referral · May · $450</span></li><li>Excel agent total <span>$197,314</span></li><li>Portal agent total <span>$196,845</span></li></ul>
+      <p style="margin-top:10px">Not worth a decision from you today. We'll confirm it when we go through his tab for the team-deal rule above.</p></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="eyebrow">How to enter one</p>
+  <h2>Five fields on the Add Commission form</h2>
+  <div class="how">
+    <div class="hw"><small>1</small><b>Date</b><span>Closing date. Month is on this page, day is in your closing file.</span></div>
+    <div class="hw"><small>2</small><b>Property</b><span>Copy the address as written here.</span></div>
+    <div class="hw"><small>3</small><b>Sale price</b><span>From the table.</span></div>
+    <div class="hw"><small>4</small><b>Gross commission</b><span>From the table. The portal runs the split from the agent's plan.</span></div>
+    <div class="hw hi"><small>5</small><b>Check the split</b><span>If the portal's agent split doesn't match the Excel figure here, stop and tell us. That's a plan setting, not a typo.</span></div>
+  </div>
+  <p class="note">Three entries, about two minutes each. Or hand us the dates and we do it on the Thursday call while you watch.</p>
+</div></section>
+
+<section class="close"><div class="wrap">
+  <p>Three lines to type, one question to answer, and the closing counts line up for every agent. What's left is a <em>$6,110 referral puzzle</em> on one tab, and we'll solve that next.</p>
+</div></section>
+
+<footer><div class="wrap">Hunter of Homes · RunRate Partners · Numbers taken straight from your Excel and your portal. Nothing here is an estimate.</div></footer>
+</body>
+</html>
