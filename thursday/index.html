@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F9F7F6">
+<title>Hunter of Homes · Week One Review · RunRate Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F9F7F6;--bg2:#F1ECE6;--card:#FFFDFB;--ink:#1F2A24;--soft:#5A6560;--mute:#8A938E;--line:#DED6CC;--rust:#B5562A;--rust-soft:#F3E6DB;--cream:#E0A27E;--green:#3E7A55;--green-soft:#E3EFE7;--amber:#9A6B1F;--amber-soft:#F6EBD4;--sage:#E6E8E4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:'Libre Baskerville',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(34px,5vw,54px)} h1 em{font-style:italic;font-weight:400;color:var(--rust)}
+h2{font-size:clamp(22px,3.2vw,30px);margin-bottom:6px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.eyebrow .min{font-weight:600;color:var(--mute);letter-spacing:0;text-transform:none;font-size:13px}
+.lede{font-size:17.5px;color:var(--soft);max-width:640px}
+section{padding:48px 0;border-top:1px solid var(--line)} section.alt{background:var(--bg2)}
+.hero{padding:48px 0 44px}
+.logo{height:44px;width:auto;margin-bottom:32px;display:block}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--soft);margin-top:18px}
+
+.agenda{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:30px}
+.ag{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 12px 14px}
+.ag small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:700;margin-bottom:4px}
+.ag b{display:block;font-size:14px;line-height:1.3}
+.ag span{display:block;font-size:12.5px;color:var(--soft);margin-top:3px}
+
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;display:block}
+.tile b{display:block;font-size:16px;margin-bottom:4px}
+.tile span{display:block;font-size:13.5px;color:var(--soft);line-height:1.4}
+.tile .url{font-size:12px;color:var(--rust);margin-top:8px;font-weight:600;word-break:break-all}
+
+table{width:100%;border-collapse:separate;border-spacing:0;margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px}
+th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:700;text-align:left;padding:12px 12px;background:var(--bg2);border-bottom:1px solid var(--line)}
+td{padding:12px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td b{font-weight:600}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.t-ok{background:var(--green-soft);color:var(--green)} .t-ask{background:var(--amber-soft);color:var(--amber)} .t-no{background:var(--rust-soft);color:var(--rust)} .t-est{background:var(--sage);color:var(--ink)}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.card.dec{border-color:var(--rust);border-width:2px}
+.card.dec h3{display:flex;align-items:center;gap:10px}
+.card.dec h3::before{content:"";width:22px;height:22px;border:2.5px solid var(--rust);border-radius:6px;flex:none}
+.opts{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.opts li{font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.opts li b{font-weight:600}
+
+.flag{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:8px;font-size:14.5px}
+.flag b{font-weight:600} .flag span{color:var(--soft);font-size:13.5px}
+
+.names{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
+.nm{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:14px;display:flex;align-items:center;gap:10px}
+.nm::before{content:"";width:16px;height:16px;border:2px solid var(--mute);border-radius:4px;flex:none}
+
+.swap{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;align-items:center;margin-top:22px}
+.sw{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.sw.out{opacity:.7} .sw.out h3{text-decoration:line-through;color:var(--mute)}
+.sw.in{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.sw.in h3{color:var(--cream)} .sw.in p{color:#C9D1CB}
+.sw h3{font-size:16px;margin-bottom:6px} .sw p{font-size:14px;color:var(--soft);line-height:1.5}
+.sw small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--mute);margin-bottom:8px}
+.sw.in small{color:var(--cream)}
+.arrow{text-align:center;color:var(--rust);font-weight:700;font-size:26px}
+
+.note{font-size:14px;color:var(--soft);margin-top:16px;max-width:760px}
+.close{padding:44px 0 56px}
+.close p{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(20px,2.6vw,26px);line-height:1.35;max-width:720px}
+.close p em{color:var(--rust);font-style:italic}
+footer{padding:26px 0 40px;font-size:13px;color:var(--mute);border-top:1px solid var(--line)}
+
+.kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
+.k{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:6px}
+.k small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:700;line-height:1.3}
+.k b{font-family:'Libre Baskerville',Georgia,serif;font-size:30px;line-height:1.05}
+.k b i{font-style:normal;font-family:'DM Sans',Arial,sans-serif;font-size:13px;font-weight:600;color:var(--soft)}
+.k span{font-size:12.5px;color:var(--soft);line-height:1.4}
+.k .tg{margin-top:auto}
+.k.have b{color:var(--green)} .k.est b{color:var(--amber)} .k.none b{color:var(--mute)}
+.book{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:22px}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.chart h3{font-size:15px;margin-bottom:4px} .chart p{font-size:13px;color:var(--soft);margin-bottom:14px}
+.bars{display:grid;grid-template-columns:repeat(11,1fr);gap:6px;align-items:end;height:150px}
+.bar{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:4px}
+.bar i{display:block;width:100%;background:var(--rust);border-radius:6px 6px 2px 2px;opacity:.85}
+.bar.ww i{background:var(--ink);opacity:1}
+.bar b{font-size:12px;font-weight:700} .bar span{font-size:10.5px;color:var(--mute);letter-spacing:.04em}
+.facts{display:flex;flex-direction:column;gap:8px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
+.fact b{font-family:'Libre Baskerville',Georgia,serif;font-size:24px;color:var(--rust);white-space:nowrap}
+.fact span{font-size:13.5px;color:var(--soft);line-height:1.4}
+.fact.dark{background:var(--ink);border-color:var(--ink)} .fact.dark b{color:var(--cream)} .fact.dark span{color:#C9D1CB}
+.ext{font-size:13px;color:var(--soft);margin-top:14px;max-width:760px}
+.ext a{color:var(--rust)}
+@media (max-width:820px){.kpi{grid-template-columns:1fr 1fr}.book{grid-template-columns:1fr}.bars{height:120px}}
+@media (max-width:820px){.agenda{grid-template-columns:repeat(4,1fr)}.tiles,.cards,.cards.three{grid-template-columns:1fr}.names{grid-template-columns:1fr 1fr}.swap{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+@media print{section{padding:20px 0;break-inside:avoid}.hero{padding:16px 0}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <img class="logo" src="https://hunterofhomes.info/assets/hunter-of-homes-logo-DUVXlMfr.png" alt="Hunter of Homes">
+  <p class="eyebrow">Weekly call · Week one review</p>
+  <h1>Week one is built. <em>Here's what we need from you to switch it on.</em></h1>
+  <p class="lede">Seven things, about an hour. Most of it is you deciding, not us presenting.</p>
+  <div class="meta"><span>Hunter of Homes · ERA Powered</span><span>With RunRate Partners</span><span>Thursday, 11:00 MT</span></div>
+  <div class="agenda">
+    <div class="ag"><small>1 · 5 min</small><b>What's built</b><span>Three pages, one place</span></div>
+    <div class="ag"><small>2 · 10 min</small><b>Scoreboard</b><span>Five numbers, where they stand</span></div>
+    <div class="ag"><small>3 · 10 min</small><b>Ramp board</b><span>Three agents past day 60</span></div>
+    <div class="ag"><small>4 · 5 min</small><b>Roster</b><span>Which five left</span></div>
+    <div class="ag"><small>5 · 10 min</small><b>Three rules</b><span>So Excel and portal agree</span></div>
+    <div class="ag"><small>6 · 10 min</small><b>The Monday</b><span>Check to paid, three fields</span></div>
+    <div class="ag"><small>7 · 10 min</small><b>Next two weeks</b><span>Where the time goes</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <p class="eyebrow">1 · What's built <span class="min">5 min</span></p>
+  <h2>Three pages, all yours, all from your own data</h2>
+  <div class="tiles">
+    <a class="tile" href="../week-one/"><b>Week one</b><span>What the portal has, the ramp board, the roster, Excel vs portal, the three-field spec.</span><span class="url">runratepartners.github.io/hoh-proposal/week-one/</span></a>
+    <a class="tile" href="../closings/"><b>Missing closings</b><span>Four closings the portal doesn't have, ready to type in. One needs your call.</span><span class="url">runratepartners.github.io/hoh-proposal/closings/</span></a>
+    <a class="tile" href="../closeout/"><b>The Monday closeout</b><span>Your check-to-paid routine as a 12-step checklist, three lanes, about 25 minutes.</span><span class="url">runratepartners.github.io/hoh-proposal/closeout/</span></a>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="eyebrow">2 · Scoreboard <span class="min">10 min</span></p>
+  <h2>The five numbers. Where each one stands today.</h2>
+  <p class="lede">Green is measured from your data. Amber is your own estimate from the kickoff, not measured yet. Grey is waiting on one thing.</p>
+  <div class="kpi">
+    <div class="k est"><small>Your hours a week on agent questions</small><b>6 <i>hrs</i></b><span>Your estimate on the kickoff. Target 3 by day 60.</span><span class="tg"><span class="tag t-est">Needs your daily minutes</span></span></div>
+    <div class="k none"><small>Check received to agent paid</small><b>1 to 4 <i>days</i></b><span>1 day Tuesday or ICCU, 3 to 4 mailed, as you described it. Target 24 hours any bank.</span><span class="tg"><span class="tag t-est">Starts with the three fields</span></span></div>
+    <div class="k have"><small>Days to first closing, new agents</small><b>2 <i>of 6</i></b><span>Of the six who signed the handbook this year, two have closed. Four are open at day 94 to 108.</span><span class="tg"><span class="tag t-ok">From the portal</span></span></div>
+    <div class="k have"><small>Agents retained this year</small><b>37 <i>of 42</i></b><span>Five gone: four West Wind part-timers, one let go. About 88% kept.</span><span class="tg"><span class="tag t-ok">Your count, Nov 6</span></span></div>
+    <div class="k est"><small>Agents per hour of your time</small><b>6.3</b><span>37 to 38 agents over 6 hours a week. Target 13 or more.</span><span class="tg"><span class="tag t-est">Moves when #1 moves</span></span></div>
+  </div>
+  <p class="note">Two of the five can't be measured until two small things happen on your side: the daily minutes, and the three fields. Both are on this page.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Your 2026 book <span class="min">in section 2</span></p>
+  <h2>What your Excel says about the business, once it's all in one place</h2>
+  <p class="lede">We rolled up all 32 agent tabs. Your own production is left out so this is the agents only.</p>
+  <div class="book">
+    <div class="chart"><h3>Closings by month, 2026</h3><p>178 closings, $1.53M gross commission, 25 producing agents. Dark bars are the months with West Wind agents' closings in them.</p>
+      <div class="bars"><div class="bar"><b>17</b><i style="height:56%"></i><span>Jan</span></div><div class="bar"><b>9</b><i style="height:30%"></i><span>Feb</span></div><div class="bar"><b>15</b><i style="height:50%"></i><span>Mar</span></div><div class="bar"><b>20</b><i style="height:66%"></i><span>Apr</span></div><div class="bar"><b>13</b><i style="height:43%"></i><span>May</span></div><div class="bar"><b>22</b><i style="height:73%"></i><span>Jun</span></div><div class="bar"><b>20</b><i style="height:66%"></i><span>Jul</span></div><div class="bar"><b>17</b><i style="height:56%"></i><span>Aug</span></div><div class="bar ww"><b>30</b><i style="height:100%"></i><span>Sep</span></div><div class="bar ww"><b>18</b><i style="height:60%"></i><span>Oct</span></div><div class="bar ww"><b>2</b><i style="height:6%"></i><span>Nov</span></div></div></div>
+    <div class="facts">
+      <div class="fact dark"><b>71%</b><span>of agent GCI comes from five people: Dave, Heather, Daniel, Kaitlyn, Lara. Top ten is 89%. Keeping those ten is the business.</span></div>
+      <div class="fact"><b>12 of 25</b><span>producing agents closed one or two deals all year. That's the ramp problem in one number, and it's where 150 agents comes from or doesn't.</span></div>
+      <div class="fact"><b>$340K</b><span>median sale price across your closings, average $390K. Below both county medians, which is your niche working as designed.</span></div>
+      <div class="fact"><b>5</b><span>agents hit the $10K cap this year. Every one of them is in the top five.</span></div>
+    </div>
+  </div>
+  <p class="ext">For scale, not from your data: Canyon County's median sold price was $435,900 and Ada County's $582,000 in June 2026, with closed sales up 9% and 17% respectively in the first half of the year (<a href="https://www.mikebrowngroup.com/boise-treasure-valley-h1-2026-market-recap/">Mike Brown Group, H1 2026 recap</a>). Your $340K median sits under both, which is the small-acreage, outskirts book you said you wanted.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="eyebrow">3 · Ramp board <span class="min">10 min</span></p>
+  <h2>Three agents past day 60 with no closing</h2>
+  <p class="lede">You said after step 13 "the follow-up is going to be me." This is the follow-up. The question is who does it and how.</p>
+  <div class="flag"><div><b>Jennifer Essig</b> <span>· signed Jul 22 · day 108 · checklist 8 of 13</span></div><span class="tag t-no">No closing yet</span></div>
+  <div class="flag"><div><b>Dylan Pease</b> <span>· signed Jul 31 · day 99 · checklist 8 of 13</span></div><span class="tag t-no">No closing yet</span></div>
+  <div class="flag"><div><b>Eric Barnabe</b> <span>· signed Aug 5 · day 94 · checklist 10 of 13</span></div><span class="tag t-no">No closing yet</span></div>
+  <div class="flag"><div><b>Heidi Hodgins</b> <span>· signed Jul 29 · day 101 · checklist 8 of 13</span></div><span class="tag t-ask">1 closing in Excel, 0 in portal</span></div>
+  <div class="cards">
+    <div class="card dec"><h3>Decision: how we check in</h3>
+      <ul class="opts">
+        <li><b>You call, we prep.</b> We send you a one-line brief per agent the night before. You make the call.</li>
+        <li><b>We call, you're cc'd.</b> We introduce ourselves as your ops team, ask what's in the way, you get the summary.</li>
+        <li><b>Together the first time.</b> You make the intro, we take it from the second check-in on.</li>
+      </ul></div>
+    <div class="card"><h3>What a check-in is</h3>
+      <p>Ten minutes. What's in the pipeline, what's stuck, what they need from you that they haven't asked for. Logged in the portal under the agent. Repeats every two weeks until the first closing, then monthly.</p>
+      <p style="margin-top:8px">Not coaching. Not recruiting. Just making sure nobody goes quiet for 100 days without someone noticing.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">4 · Roster <span class="min">5 min</span></p>
+  <h2>Sixteen names in the portal with no 2026 closing. Which five left?</h2>
+  <p class="lede">Tick the ones who are gone. We mark them inactive, the count matches your 37 to 38, and the scoreboard stops counting them.</p>
+  <div class="names">
+    <div class="nm">Alexis Woods</div><div class="nm">Bob Hurtt</div><div class="nm">Emilee Wilks</div><div class="nm">Genny</div>
+    <div class="nm">James McMahan</div><div class="nm">Jason Hopkins</div><div class="nm">Josu Amuchastegui</div><div class="nm">Kelley Paynter</div>
+    <div class="nm">Matthew</div><div class="nm">Nick Cracolice Jr.</div><div class="nm">Paula Miller</div><div class="nm">Robbie Nicolosi</div>
+    <div class="nm">Ron Paynter</div><div class="nm">Terry Silsby</div><div class="nm">Tracey Provost</div><div class="nm" style="color:var(--mute)">Paula Christine Miller (duplicate)</div>
+  </div>
+  <p class="note">Also two duplicate records to merge: Terry Silsby (two emails) and Paula Miller / Paula Christine Miller. Bob Hurtt has an October closing in your Excel, so he's probably not one of the five.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="eyebrow">5 · Three rules <span class="min">10 min</span></p>
+  <h2>Three one-line rules and the Excel stops being your backup</h2>
+  <p class="lede">Every gap we found between the Excel and the portal comes down to one of these. You pick, we apply it everywhere.</p>
+  <div class="cards three">
+    <div class="card dec"><h3>Shared deals</h3>
+      <p>Karen and Nick Sr. have the same four September closings on both their tabs at full gross. The portal already has three under both names.</p>
+      <ul class="opts"><li>Two sides, two records. Both earned it.</li><li>One deal, split. One record, two agents.</li></ul></div>
+    <div class="card dec"><h3>511 Chestnut</h3>
+      <p>$75,000 sale, $2,250 gross, on Karen's, Nick Sr.'s and Heidi's tabs. Agent splits across the three add to $5,580. Not in the portal.</p>
+      <ul class="opts"><li>How it actually paid: ______</li></ul></div>
+    <div class="card dec"><h3>The ERA 5%</h3>
+      <p>Portal counts it as brokerage revenue. Excel keeps it in its own column. That's why the portal reads higher on 11 agents.</p>
+      <ul class="opts"><li>Portal is right, ERA is revenue.</li><li>Excel is right, ERA is pass-through.</li></ul></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">6 · The Monday <span class="min">10 min</span></p>
+  <h2>Check to paid, written down, with the two dates it was missing</h2>
+  <div class="cards">
+    <div class="card"><h3>The closeout checklist</h3>
+      <p>Your Monday as 12 steps in three phases: receive, enter, pay. Three lanes: Fruitland Tuesday, ICCU, mailed. Two new steps, both just a date. Print it, or we put it in the portal Resources tab.</p></div>
+    <div class="card dec"><h3>The three fields</h3>
+      <p>Check received, Agent paid, Payout method. The prompt is on the week one page.</p>
+      <ul class="opts"><li>Already in. Show us.</li><li>Not yet. We do it together on this call, 5 minutes in Lovable.</li></ul></div>
+  </div>
+  <p class="note">Jeffery: where the treasury officer conversation landed. Positive pay first, then the rail for electronic payouts. You approve every payout either way.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="eyebrow">7 · Next two weeks <span class="min">10 min</span></p>
+  <h2>You told us to hold recruiting and CE. Here's where that time goes instead.</h2>
+  <p class="lede">Same price, same timeline. Two things that take hours off your week now, instead of two things you asked us to wait on.</p>
+  <div class="swap">
+    <div class="sw out"><small>Was</small><h3>Recruiting</h3><p>Scored prospect list, pipeline, outreach in your voice, one-page offer. Shelved until you say go.</p></div>
+    <div class="arrow">→</div>
+    <div class="sw in"><small>Instead</small><h3>Agent questions off your desk</h3><p>Two weeks of capturing every question. Answers written once, in the portal. New agents ask us first. You get the broker-only ones. Measured in your hours.</p></div>
+  </div>
+  <div class="swap">
+    <div class="sw out"><small>Was</small><h3>CE program</h3><p>Monthly session, first one booked, invites. Waits on the Fruitland remodel and your IREC certification. 2027.</p></div>
+    <div class="arrow">→</div>
+    <div class="sw in"><small>Instead</small><h3>Electronic payouts, end to end</h3><p>Jeffery on the bank side. We run the rollout: agent bank info collected by you, the Monday approve-and-pay routine, Tuesday handoff retired, days-to-paid on the scoreboard.</p></div>
+  </div>
+  <p class="note">Still in no matter what: the baseline, the ramp check-ins, the roster cleanup, every SOP, the scoreboard, the handover. If you're good with the swap, we confirm it in one line by email after this call.</p>
+</div></section>
+
+<section class="close"><div class="wrap">
+  <p>One hour of your calls, and week two runs on <em>your rules</em> instead of our guesses.</p>
+</div></section>
+
+<footer><div class="wrap">Hunter of Homes · RunRate Partners · Every number on this page is from your portal or your Excel.</div></footer>
+</body>
+</html>
